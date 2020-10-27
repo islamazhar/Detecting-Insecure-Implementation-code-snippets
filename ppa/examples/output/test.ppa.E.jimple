@@ -1,0 +1,18 @@
+public class test.ppa.E extends java.lang.Object
+{
+    byte[] keystart;
+
+    public void <init>()
+    {
+        test.ppa.E this;
+        java.lang.String $r0;
+        byte[] $r1;
+
+        this := @this: test.ppa.E;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        $r0 = "this is a key";
+        $r1 = virtualinvoke $r0.<java.lang.String: byte[] getBytes()>();
+        this.<test.ppa.E: byte[] keystart> = $r1;
+        return;
+    }
+}

@@ -1,0 +1,63 @@
+class test.ppa.A extends test.ppa.B
+{
+
+    public boolean methodA()
+    {
+        test.ppa.A this;
+        int index, $i0;
+        test.ppa.C varC;
+        test.ppa.D $r0;
+        test.ppa.E varE, $r1;
+        test.ppa.F $r3;
+        boolean $z0;
+
+        this := @this: test.ppa.A;
+        index = 0;
+        $r0 = new test.ppa.D;
+        specialinvoke $r0.<test.ppa.D: void <init>()>();
+        varC = $r0;
+        $r1 = new test.ppa.E;
+        specialinvoke $r1.<test.ppa.E: void <init>()>();
+        varE = $r1;
+        varC.<test.ppa.C: int field1> = index;
+        $i0 = varC.<test.ppa.C: int field1>;
+        virtualinvoke varC.<test.ppa.C: MMAGICPPACKAGE.MagicClass method2(int,test.ppa.E)>($i0, varE);
+        $r3 = varC.<test.ppa.C: test.ppa.F field2>;
+        specialinvoke this.<test.ppa.A: void methodB(int,test.ppa.F)>(index, $r3);
+        $z0 = virtualinvoke varE.<test.ppa.E: boolean checkThis()>();
+        return $z0;
+    }
+
+    private void methodB(int, test.ppa.F)
+    {
+        test.ppa.A this;
+        int param1;
+        test.ppa.F param2;
+
+        this := @this: test.ppa.A;
+        param1 := @parameter0: int;
+        param2 := @parameter1: test.ppa.F;
+        return;
+    }
+
+    private void methodB(test.ppa.G, test.ppa.H)
+    {
+        test.ppa.A this;
+        test.ppa.G param1;
+        test.ppa.H param2;
+
+        this := @this: test.ppa.A;
+        param1 := @parameter0: test.ppa.G;
+        param2 := @parameter1: test.ppa.H;
+        return;
+    }
+
+    public void <init>()
+    {
+        test.ppa.A this;
+
+        this := @this: test.ppa.A;
+        specialinvoke this.<test.ppa.B: void <init>()>();
+        return;
+    }
+}

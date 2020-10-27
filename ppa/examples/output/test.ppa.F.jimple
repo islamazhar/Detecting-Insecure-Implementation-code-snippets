@@ -1,0 +1,19 @@
+public class test.ppa.F extends java.lang.Object
+{
+    test.ppa.SecretKey key;
+
+    public void <init>()
+    {
+        test.ppa.F this;
+        MMAGICPPACKAGE.MagicClass $r0, $r1;
+        test.ppa.SecretKey $r2;
+
+        this := @this: test.ppa.F;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        $r0 = staticinvoke <test.ppa.SecretKeyFactory: MMAGICPPACKAGE.MagicClass getInstance(java.lang.String)>("PBEWithMD5AndDES");
+        $r1 = <test.ppa.F: MMAGICPPACKAGE.MagicClass keySpec>;
+        $r2 = virtualinvoke $r0.<MMAGICPPACKAGE.MagicClass: test.ppa.SecretKey generateSecret(MMAGICPPACKAGE.MagicClass)>($r1);
+        this.<test.ppa.F: test.ppa.SecretKey key> = $r2;
+        return;
+    }
+}

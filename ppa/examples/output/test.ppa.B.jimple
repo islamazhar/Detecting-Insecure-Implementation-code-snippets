@@ -1,0 +1,21 @@
+public class test.ppa.B extends java.lang.Object
+{
+    test.ppa.TrustManager[] tm;
+
+    public void <init>()
+    {
+        test.ppa.B this;
+        test.ppa.TrustManager[] $r0, $r1;
+        test.ppa.B$1 $r2;
+
+        this := @this: test.ppa.B;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        $r0 = newarray (test.ppa.TrustManager)[1];
+        $r1 = newarray (test.ppa.TrustManager)[1];
+        $r2 = new test.ppa.B$1;
+        specialinvoke $r2.<test.ppa.B$1: void <init>(test.ppa.B)>(this);
+        $r1[0] = $r2;
+        this.<test.ppa.B: test.ppa.TrustManager[] tm> = $r1;
+        return;
+    }
+}

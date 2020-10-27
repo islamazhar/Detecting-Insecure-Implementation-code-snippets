@@ -1,0 +1,21 @@
+public class test.ppa.D extends java.lang.Object
+{
+    byte[] iv;
+
+    public void <init>()
+    {
+        test.ppa.D this;
+        byte[] $r0, $r1;
+
+        this := @this: test.ppa.D;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        $r0 = newarray (byte)[1];
+        $r1 = newarray (byte)[4];
+        $r1[0] = 0;
+        $r1[1] = 0;
+        $r1[2] = 0;
+        $r1[3] = 15;
+        this.<test.ppa.D: byte[] iv> = $r1;
+        return;
+    }
+}
