@@ -1,0 +1,223 @@
+\contentsline {paragraph}{Adding your own subphases}{1}{section*.1}
+\contentsline {section}{\numberline {1}Jimple Body Creation ({\tt jb})}{4}{section.1}
+\contentsline {paragraph}{Accepted phase options:}{4}{section*.3}
+\contentsline {subsection}{\numberline {1.1}Local Splitter ({\tt jb.ls})}{4}{subsection.1.1}
+\contentsline {paragraph}{Accepted phase options:}{5}{section*.4}
+\contentsline {subsection}{\numberline {1.2}Jimple Local Aggregator ({\tt jb.a})}{5}{subsection.1.2}
+\contentsline {paragraph}{Accepted phase options:}{5}{section*.5}
+\contentsline {subsection}{\numberline {1.3}Unused Local Eliminator ({\tt jb.ule})}{5}{subsection.1.3}
+\contentsline {paragraph}{Accepted phase options:}{5}{section*.6}
+\contentsline {subsection}{\numberline {1.4}Type Assigner ({\tt jb.tr})}{5}{subsection.1.4}
+\contentsline {paragraph}{Accepted phase options:}{5}{section*.7}
+\contentsline {subsection}{\numberline {1.5}Unsplit-originals Local Packer ({\tt jb.ulp})}{5}{subsection.1.5}
+\contentsline {paragraph}{Accepted phase options:}{5}{section*.8}
+\contentsline {subsection}{\numberline {1.6}Local Name Standardizer ({\tt jb.lns})}{6}{subsection.1.6}
+\contentsline {paragraph}{Accepted phase options:}{6}{section*.9}
+\contentsline {subsection}{\numberline {1.7}Copy Propagator ({\tt jb.cp})}{6}{subsection.1.7}
+\contentsline {paragraph}{Accepted phase options:}{6}{section*.10}
+\contentsline {subsection}{\numberline {1.8}Dead Assignment Eliminator ({\tt jb.dae})}{6}{subsection.1.8}
+\contentsline {paragraph}{Accepted phase options:}{6}{section*.11}
+\contentsline {subsection}{\numberline {1.9}Post-copy propagation Unused Local Eliminator ({\tt jb.cp-ule})}{7}{subsection.1.9}
+\contentsline {paragraph}{Accepted phase options:}{7}{section*.12}
+\contentsline {subsection}{\numberline {1.10}Local Packer ({\tt jb.lp})}{7}{subsection.1.10}
+\contentsline {paragraph}{Accepted phase options:}{7}{section*.13}
+\contentsline {subsection}{\numberline {1.11}Nop Eliminator ({\tt jb.ne})}{7}{subsection.1.11}
+\contentsline {paragraph}{Accepted phase options:}{7}{section*.14}
+\contentsline {subsection}{\numberline {1.12}Unreachable Code Eliminator ({\tt jb.uce})}{7}{subsection.1.12}
+\contentsline {paragraph}{Accepted phase options:}{7}{section*.15}
+\contentsline {subsection}{\numberline {1.13}Trap Tightener ({\tt jb.tt})}{7}{subsection.1.13}
+\contentsline {paragraph}{Accepted phase options:}{7}{section*.16}
+\contentsline {section}{\numberline {2}Java To Jimple Body Creation ({\tt jj})}{8}{section.2}
+\contentsline {paragraph}{Accepted phase options:}{8}{section*.17}
+\contentsline {subsection}{\numberline {2.1}Local Splitter ({\tt jj.ls})}{8}{subsection.2.1}
+\contentsline {paragraph}{Accepted phase options:}{8}{section*.18}
+\contentsline {subsection}{\numberline {2.2}Jimple Local Aggregator ({\tt jj.a})}{8}{subsection.2.2}
+\contentsline {paragraph}{Accepted phase options:}{8}{section*.19}
+\contentsline {subsection}{\numberline {2.3}Unused Local Eliminator ({\tt jj.ule})}{8}{subsection.2.3}
+\contentsline {paragraph}{Accepted phase options:}{8}{section*.20}
+\contentsline {subsection}{\numberline {2.4}Type Assigner ({\tt jj.tr})}{8}{subsection.2.4}
+\contentsline {paragraph}{Accepted phase options:}{8}{section*.21}
+\contentsline {subsection}{\numberline {2.5}Unsplit-originals Local Packer ({\tt jj.ulp})}{9}{subsection.2.5}
+\contentsline {paragraph}{Accepted phase options:}{9}{section*.22}
+\contentsline {subsection}{\numberline {2.6}Local Name Standardizer ({\tt jj.lns})}{9}{subsection.2.6}
+\contentsline {paragraph}{Accepted phase options:}{9}{section*.23}
+\contentsline {subsection}{\numberline {2.7}Copy Propagator ({\tt jj.cp})}{9}{subsection.2.7}
+\contentsline {paragraph}{Accepted phase options:}{9}{section*.24}
+\contentsline {subsection}{\numberline {2.8}Dead Assignment Eliminator ({\tt jj.dae})}{10}{subsection.2.8}
+\contentsline {paragraph}{Accepted phase options:}{10}{section*.25}
+\contentsline {subsection}{\numberline {2.9}Post-copy propagation Unused Local Eliminator ({\tt jj.cp-ule})}{10}{subsection.2.9}
+\contentsline {paragraph}{Accepted phase options:}{10}{section*.26}
+\contentsline {subsection}{\numberline {2.10}Local Packer ({\tt jj.lp})}{10}{subsection.2.10}
+\contentsline {paragraph}{Accepted phase options:}{10}{section*.27}
+\contentsline {subsection}{\numberline {2.11}Nop Eliminator ({\tt jj.ne})}{10}{subsection.2.11}
+\contentsline {paragraph}{Accepted phase options:}{10}{section*.28}
+\contentsline {subsection}{\numberline {2.12}Unreachable Code Eliminator ({\tt jj.uce})}{10}{subsection.2.12}
+\contentsline {paragraph}{Accepted phase options:}{10}{section*.29}
+\contentsline {section}{\numberline {3}Call Graph Constructor ({\tt cg})}{11}{section.3}
+\contentsline {paragraph}{Accepted phase options:}{11}{section*.30}
+\contentsline {subsection}{\numberline {3.1}Class Hierarchy Analysis ({\tt cg.cha})}{12}{subsection.3.1}
+\contentsline {paragraph}{Accepted phase options:}{12}{section*.31}
+\contentsline {subsection}{\numberline {3.2}Spark ({\tt cg.spark})}{12}{subsection.3.2}
+\contentsline {paragraph}{Accepted phase options:}{12}{section*.32}
+\contentsline {subsubsection}{\numberline {3.2.1}Spark General Options}{12}{subsubsection.3.2.1}
+\contentsline {paragraph}{Accepted phase options:}{12}{section*.33}
+\contentsline {subsubsection}{\numberline {3.2.2}Spark Pointer Assignment Graph Building Options}{12}{subsubsection.3.2.2}
+\contentsline {paragraph}{Accepted phase options:}{12}{section*.34}
+\contentsline {subsubsection}{\numberline {3.2.3}Spark Pointer Assignment Graph Simplification Options}{13}{subsubsection.3.2.3}
+\contentsline {paragraph}{Accepted phase options:}{13}{section*.35}
+\contentsline {subsubsection}{\numberline {3.2.4}Spark Points-To Set Flowing Options}{14}{subsubsection.3.2.4}
+\contentsline {paragraph}{Accepted phase options:}{14}{section*.36}
+\contentsline {subsubsection}{\numberline {3.2.5}Spark Output Options}{15}{subsubsection.3.2.5}
+\contentsline {paragraph}{Accepted phase options:}{15}{section*.37}
+\contentsline {subsection}{\numberline {3.3}Paddle ({\tt cg.paddle})}{16}{subsection.3.3}
+\contentsline {paragraph}{Accepted phase options:}{16}{section*.38}
+\contentsline {subsubsection}{\numberline {3.3.1}Paddle General Options}{16}{subsubsection.3.3.1}
+\contentsline {paragraph}{Accepted phase options:}{16}{section*.39}
+\contentsline {subsubsection}{\numberline {3.3.2}Paddle Context Sensitivity Options}{18}{subsubsection.3.3.2}
+\contentsline {paragraph}{Accepted phase options:}{18}{section*.40}
+\contentsline {subsubsection}{\numberline {3.3.3}Paddle Pointer Assignment Graph Building Options}{19}{subsubsection.3.3.3}
+\contentsline {paragraph}{Accepted phase options:}{19}{section*.41}
+\contentsline {subsubsection}{\numberline {3.3.4}Paddle Points-To Set Flowing Options}{20}{subsubsection.3.3.4}
+\contentsline {paragraph}{Accepted phase options:}{20}{section*.42}
+\contentsline {subsubsection}{\numberline {3.3.5}Paddle Output Options}{21}{subsubsection.3.3.5}
+\contentsline {paragraph}{Accepted phase options:}{21}{section*.43}
+\contentsline {section}{\numberline {4}Whole Shimple Transformation Pack ({\tt wstp})}{22}{section.4}
+\contentsline {paragraph}{Accepted phase options:}{22}{section*.44}
+\contentsline {section}{\numberline {5}Whole Shimple Optimization Pack ({\tt wsop})}{22}{section.5}
+\contentsline {paragraph}{Accepted phase options:}{22}{section*.45}
+\contentsline {section}{\numberline {6}Whole-Jimple Transformation Pack ({\tt wjtp})}{22}{section.6}
+\contentsline {paragraph}{Accepted phase options:}{22}{section*.46}
+\contentsline {section}{\numberline {7}Whole-Jimple Optimization Pack ({\tt wjop})}{22}{section.7}
+\contentsline {paragraph}{Accepted phase options:}{22}{section*.47}
+\contentsline {subsection}{\numberline {7.1}Static Method Binder ({\tt wjop.smb})}{22}{subsection.7.1}
+\contentsline {paragraph}{Accepted phase options:}{23}{section*.48}
+\contentsline {subsection}{\numberline {7.2}Static Inliner ({\tt wjop.si})}{23}{subsection.7.2}
+\contentsline {paragraph}{Accepted phase options:}{23}{section*.49}
+\contentsline {section}{\numberline {8}Whole-Jimple Annotation Pack ({\tt wjap})}{24}{section.8}
+\contentsline {paragraph}{Accepted phase options:}{24}{section*.50}
+\contentsline {subsection}{\numberline {8.1}Rectangular Array Finder ({\tt wjap.ra})}{24}{subsection.8.1}
+\contentsline {paragraph}{Accepted phase options:}{25}{section*.51}
+\contentsline {subsection}{\numberline {8.2}Unreachable Method Tagger ({\tt wjap.umt})}{25}{subsection.8.2}
+\contentsline {paragraph}{Accepted phase options:}{25}{section*.52}
+\contentsline {subsection}{\numberline {8.3}Unreachable Fields Tagger ({\tt wjap.uft})}{25}{subsection.8.3}
+\contentsline {paragraph}{Accepted phase options:}{25}{section*.53}
+\contentsline {subsection}{\numberline {8.4}Tightest Qualifiers Tagger ({\tt wjap.tqt})}{25}{subsection.8.4}
+\contentsline {paragraph}{Accepted phase options:}{25}{section*.54}
+\contentsline {subsection}{\numberline {8.5}Call Graph Grapher ({\tt wjap.cgg})}{25}{subsection.8.5}
+\contentsline {paragraph}{Accepted phase options:}{25}{section*.55}
+\contentsline {subsection}{\numberline {8.6}Purity Analysis [AM] ({\tt wjap.purity})}{25}{subsection.8.6}
+\contentsline {paragraph}{Accepted phase options:}{26}{section*.56}
+\contentsline {section}{\numberline {9}Shimple Control ({\tt shimple})}{26}{section.9}
+\contentsline {paragraph}{Accepted phase options:}{26}{section*.57}
+\contentsline {section}{\numberline {10}Shimple Transformation Pack ({\tt stp})}{26}{section.10}
+\contentsline {paragraph}{Accepted phase options:}{26}{section*.58}
+\contentsline {section}{\numberline {11}Shimple Optimization Pack ({\tt sop})}{26}{section.11}
+\contentsline {paragraph}{Accepted phase options:}{27}{section*.59}
+\contentsline {subsection}{\numberline {11.1}Shimple Constant Propagator and Folder ({\tt sop.cpf})}{27}{subsection.11.1}
+\contentsline {paragraph}{Accepted phase options:}{27}{section*.60}
+\contentsline {section}{\numberline {12}Jimple Transformation Pack ({\tt jtp})}{27}{section.12}
+\contentsline {paragraph}{Accepted phase options:}{27}{section*.61}
+\contentsline {section}{\numberline {13}Jimple Optimization Pack ({\tt jop})}{27}{section.13}
+\contentsline {paragraph}{Accepted phase options:}{27}{section*.62}
+\contentsline {subsection}{\numberline {13.1}Common Subexpression Eliminator ({\tt jop.cse})}{27}{subsection.13.1}
+\contentsline {paragraph}{Accepted phase options:}{28}{section*.63}
+\contentsline {subsection}{\numberline {13.2}Busy Code Motion ({\tt jop.bcm})}{28}{subsection.13.2}
+\contentsline {paragraph}{Accepted phase options:}{28}{section*.64}
+\contentsline {subsection}{\numberline {13.3}Lazy Code Motion ({\tt jop.lcm})}{28}{subsection.13.3}
+\contentsline {paragraph}{Accepted phase options:}{29}{section*.65}
+\contentsline {subsection}{\numberline {13.4}Copy Propagator ({\tt jop.cp})}{29}{subsection.13.4}
+\contentsline {paragraph}{Accepted phase options:}{29}{section*.66}
+\contentsline {subsection}{\numberline {13.5}Jimple Constant Propagator and Folder ({\tt jop.cpf})}{29}{subsection.13.5}
+\contentsline {paragraph}{Accepted phase options:}{30}{section*.67}
+\contentsline {subsection}{\numberline {13.6}Conditional Branch Folder ({\tt jop.cbf})}{30}{subsection.13.6}
+\contentsline {paragraph}{Accepted phase options:}{30}{section*.68}
+\contentsline {subsection}{\numberline {13.7}Dead Assignment Eliminator ({\tt jop.dae})}{30}{subsection.13.7}
+\contentsline {paragraph}{Accepted phase options:}{30}{section*.69}
+\contentsline {subsection}{\numberline {13.8}Unreachable Code Eliminator 1 ({\tt jop.uce1})}{30}{subsection.13.8}
+\contentsline {paragraph}{Accepted phase options:}{30}{section*.70}
+\contentsline {subsection}{\numberline {13.9}Unconditional Branch Folder 1 ({\tt jop.ubf1})}{30}{subsection.13.9}
+\contentsline {paragraph}{Accepted phase options:}{30}{section*.71}
+\contentsline {subsection}{\numberline {13.10}Unreachable Code Eliminator 2 ({\tt jop.uce2})}{31}{subsection.13.10}
+\contentsline {paragraph}{Accepted phase options:}{31}{section*.72}
+\contentsline {subsection}{\numberline {13.11}Unconditional Branch Folder 2 ({\tt jop.ubf2})}{31}{subsection.13.11}
+\contentsline {paragraph}{Accepted phase options:}{31}{section*.73}
+\contentsline {subsection}{\numberline {13.12}Unused Local Eliminator ({\tt jop.ule})}{31}{subsection.13.12}
+\contentsline {paragraph}{Accepted phase options:}{31}{section*.74}
+\contentsline {section}{\numberline {14}Jimple Annotation Pack ({\tt jap})}{31}{section.14}
+\contentsline {paragraph}{Accepted phase options:}{31}{section*.75}
+\contentsline {subsection}{\numberline {14.1}Null Pointer Checker ({\tt jap.npc})}{31}{subsection.14.1}
+\contentsline {paragraph}{Accepted phase options:}{31}{section*.76}
+\contentsline {subsection}{\numberline {14.2}Null Pointer Colourer ({\tt jap.npcolorer})}{32}{subsection.14.2}
+\contentsline {paragraph}{Accepted phase options:}{32}{section*.77}
+\contentsline {subsection}{\numberline {14.3}Array Bound Checker ({\tt jap.abc})}{32}{subsection.14.3}
+\contentsline {paragraph}{Accepted phase options:}{32}{section*.78}
+\contentsline {subsection}{\numberline {14.4}Profiling Generator ({\tt jap.profiling})}{33}{subsection.14.4}
+\contentsline {paragraph}{Accepted phase options:}{33}{section*.79}
+\contentsline {subsection}{\numberline {14.5}Side Effect tagger ({\tt jap.sea})}{33}{subsection.14.5}
+\contentsline {paragraph}{Accepted phase options:}{33}{section*.80}
+\contentsline {subsection}{\numberline {14.6}Field Read/Write Tagger ({\tt jap.fieldrw})}{33}{subsection.14.6}
+\contentsline {paragraph}{Accepted phase options:}{33}{section*.81}
+\contentsline {subsection}{\numberline {14.7}Call Graph Tagger ({\tt jap.cgtagger})}{34}{subsection.14.7}
+\contentsline {paragraph}{Accepted phase options:}{34}{section*.82}
+\contentsline {subsection}{\numberline {14.8}Parity Tagger ({\tt jap.parity})}{34}{subsection.14.8}
+\contentsline {paragraph}{Accepted phase options:}{34}{section*.83}
+\contentsline {subsection}{\numberline {14.9}Parameter Alias Tagger ({\tt jap.pat})}{34}{subsection.14.9}
+\contentsline {paragraph}{Accepted phase options:}{34}{section*.84}
+\contentsline {subsection}{\numberline {14.10}Live Variables Tagger ({\tt jap.lvtagger})}{34}{subsection.14.10}
+\contentsline {paragraph}{Accepted phase options:}{34}{section*.85}
+\contentsline {subsection}{\numberline {14.11}Reaching Defs Tagger ({\tt jap.rdtagger})}{34}{subsection.14.11}
+\contentsline {paragraph}{Accepted phase options:}{34}{section*.86}
+\contentsline {subsection}{\numberline {14.12}Cast Elimination Check Tagger ({\tt jap.che})}{34}{subsection.14.12}
+\contentsline {paragraph}{Accepted phase options:}{34}{section*.87}
+\contentsline {subsection}{\numberline {14.13}Unreachable Method Transformer ({\tt jap.umt})}{35}{subsection.14.13}
+\contentsline {paragraph}{Accepted phase options:}{35}{section*.88}
+\contentsline {subsection}{\numberline {14.14}Loop Invariant Tagger ({\tt jap.lit})}{35}{subsection.14.14}
+\contentsline {paragraph}{Accepted phase options:}{35}{section*.89}
+\contentsline {subsection}{\numberline {14.15}Available Expressions Tagger ({\tt jap.aet})}{35}{subsection.14.15}
+\contentsline {paragraph}{Accepted phase options:}{35}{section*.90}
+\contentsline {subsection}{\numberline {14.16}Dominators Tagger ({\tt jap.dmt})}{35}{subsection.14.16}
+\contentsline {paragraph}{Accepted phase options:}{35}{section*.91}
+\contentsline {section}{\numberline {15}Grimp Body Creation ({\tt gb})}{35}{section.15}
+\contentsline {paragraph}{Accepted phase options:}{35}{section*.92}
+\contentsline {subsection}{\numberline {15.1}Grimp Pre-folding Aggregator ({\tt gb.a1})}{36}{subsection.15.1}
+\contentsline {paragraph}{Accepted phase options:}{36}{section*.93}
+\contentsline {subsection}{\numberline {15.2}Grimp Constructor Folder ({\tt gb.cf})}{36}{subsection.15.2}
+\contentsline {paragraph}{Accepted phase options:}{36}{section*.94}
+\contentsline {subsection}{\numberline {15.3}Grimp Post-folding Aggregator ({\tt gb.a2})}{36}{subsection.15.3}
+\contentsline {paragraph}{Accepted phase options:}{37}{section*.95}
+\contentsline {subsection}{\numberline {15.4}Grimp Unused Local Eliminator ({\tt gb.ule})}{37}{subsection.15.4}
+\contentsline {paragraph}{Accepted phase options:}{37}{section*.96}
+\contentsline {section}{\numberline {16}Grimp Optimization ({\tt gop})}{37}{section.16}
+\contentsline {paragraph}{Accepted phase options:}{37}{section*.97}
+\contentsline {section}{\numberline {17}Baf Body Creation ({\tt bb})}{37}{section.17}
+\contentsline {paragraph}{Accepted phase options:}{37}{section*.98}
+\contentsline {subsection}{\numberline {17.1}Load Store Optimizer ({\tt bb.lso})}{37}{subsection.17.1}
+\contentsline {paragraph}{Accepted phase options:}{38}{section*.99}
+\contentsline {subsection}{\numberline {17.2}Peephole Optimizer ({\tt bb.pho})}{38}{subsection.17.2}
+\contentsline {paragraph}{Accepted phase options:}{38}{section*.100}
+\contentsline {subsection}{\numberline {17.3}Unused Local Eliminator ({\tt bb.ule})}{38}{subsection.17.3}
+\contentsline {paragraph}{Accepted phase options:}{38}{section*.101}
+\contentsline {subsection}{\numberline {17.4}Local Packer ({\tt bb.lp})}{39}{subsection.17.4}
+\contentsline {paragraph}{Accepted phase options:}{39}{section*.102}
+\contentsline {section}{\numberline {18}Baf Optimization ({\tt bop})}{39}{section.18}
+\contentsline {paragraph}{Accepted phase options:}{39}{section*.103}
+\contentsline {section}{\numberline {19}Tag Aggregator ({\tt tag})}{39}{section.19}
+\contentsline {paragraph}{Accepted phase options:}{39}{section*.104}
+\contentsline {subsection}{\numberline {19.1}Line Number Tag Aggregator ({\tt tag.ln})}{39}{subsection.19.1}
+\contentsline {paragraph}{Accepted phase options:}{39}{section*.105}
+\contentsline {subsection}{\numberline {19.2}Array Bounds and Null Pointer Check Tag Aggregator ({\tt tag.an})}{39}{subsection.19.2}
+\contentsline {paragraph}{Accepted phase options:}{39}{section*.106}
+\contentsline {subsection}{\numberline {19.3}Dependence Tag Aggregator ({\tt tag.dep})}{39}{subsection.19.3}
+\contentsline {paragraph}{Accepted phase options:}{40}{section*.107}
+\contentsline {subsection}{\numberline {19.4}Field Read/Write Tag Aggregator ({\tt tag.fieldrw})}{40}{subsection.19.4}
+\contentsline {paragraph}{Accepted phase options:}{40}{section*.108}
+\contentsline {section}{\numberline {20}Dava Body Creation ({\tt db})}{40}{section.20}
+\contentsline {paragraph}{Accepted phase options:}{40}{section*.109}
+\contentsline {subsection}{\numberline {20.1}Transformations ({\tt db.transformations})}{40}{subsection.20.1}
+\contentsline {paragraph}{Accepted phase options:}{40}{section*.110}
+\contentsline {subsection}{\numberline {20.2}Renamer ({\tt db.renamer})}{40}{subsection.20.2}
+\contentsline {paragraph}{Accepted phase options:}{40}{section*.111}
+\contentsline {subsection}{\numberline {20.3}De-obfuscate ({\tt db.deobfuscate})}{40}{subsection.20.3}
+\contentsline {paragraph}{Accepted phase options:}{41}{section*.112}
+\contentsline {subsection}{\numberline {20.4}Force Recompilability ({\tt db.force-recompile})}{41}{subsection.20.4}
+\contentsline {paragraph}{Accepted phase options:}{41}{section*.113}

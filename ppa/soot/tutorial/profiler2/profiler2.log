@@ -1,0 +1,144 @@
+This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.24)  18 MAR 2006 15:49
+entering extended mode
+**profiler2
+(./profiler2.tex{/usr/local/share/texmf/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, basque, czech, icelandic, slovak, slovene, loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+) (./profiler2.aux)
+\openout1 = `profiler2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 24.
+
+Overfull \hbox (26.31183pt too wide) in paragraph at lines 22--27
+[]/cmr12/In this tu-to-rial, I am mak-ing an ex-am-ple slightly dif-fer-ent fro
+m the ex-am-ple /cmtt12/GotoInstrumenter
+ []
+
+[1
+
+{/var/lib/texmf/dvips/config/pdftex.map
+Warning: pdflatex (file /var/lib/texmf/dvips/config/pdftex.map): entry for `cme
+x7' already exists, duplicates ignored
+
+Warning: pdflatex (file /var/lib/texmf/dvips/config/pdftex.map): entry for `cme
+x8' already exists, duplicates ignored
+
+Warning: pdflatex (file /var/lib/texmf/dvips/config/pdftex.map): entry for `cme
+x9' already exists, duplicates ignored
+}{/usr/local/share/texmf/pdftex/comicsans/comicsans-pdftex.map}] [2]
+Overfull \hbox (18.07022pt too wide) in paragraph at lines 119--119
+[]    /cmtt12/12        System.err.println("Usage: java MainDriver [options] cl
+assname");[] 
+ []
+
+
+Overfull \hbox (5.72021pt too wide) in paragraph at lines 258--258
+[]     /cmtt12/7   *   Insert counter instruction before static invocation inst
+ruction.[] 
+ []
+
+[3]
+Overfull \hbox (18.07022pt too wide) in paragraph at lines 258--258
+[]    /cmtt12/22  /* InvokeStaticInstrumenter extends the abstract class BodyTr
+ansformer,[] 
+ []
+
+
+Overfull \hbox (36.59523pt too wide) in paragraph at lines 258--258
+[]    /cmtt12/45    protected void internalTransform(Body body, String phase, M
+ap options) {[] 
+ []
+
+
+Overfull \hbox (36.59523pt too wide) in paragraph at lines 258--258
+[]    /cmtt12/50      System.out.println("instrumenting method : " + method.get
+Signature());[] 
+ []
+
+[4]
+Overfull \hbox (92.17026pt too wide) in paragraph at lines 258--258
+[]    /cmtt12/86        InvokeExpr incExpr= Jimple.v().newStaticInvokeExpr(incr
+easeCounter.makeRef(),[] 
+ []
+
+[5]
+Overfull \hbox (18.07022pt too wide) in paragraph at lines 258--258
+[]   /cmtt12/102      boolean isMain = signature.equals("void main(java.lang.St
+ring[])");[] 
+ []
+
+
+Overfull \hbox (129.22028pt too wide) in paragraph at lines 258--258
+[]   /cmtt12/115            InvokeExpr reportExpr= Jimple.v().newStaticInvokeEx
+pr(reportCounter.makeRef());[] 
+ []
+
+
+Overfull \hbox (5.72021pt too wide) in paragraph at lines 280--280
+[]/cmtt12/Transforming TestInvoke... instrumenting method : <TestInvoke: void <
+init>()>[] 
+ []
+
+[6] [7] [8] (./profiler2.aux) ) 
+Here is how much of TeX's memory you used:
+ 260 strings out of 95257
+ 2832 string characters out of 1187587
+ 49542 words of memory out of 1000001
+ 3424 multiletter control sequences out of 10000+50000
+ 8710 words of font info for 31 fonts, out of 500000 for 1000
+ 19 hyphenation exceptions out of 1000
+ 24i,8n,19p,132b,245s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 50 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+</usr/share/texmf/fonts/type1/bluesky/cm/cmti12.
+pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/
+type1/bluesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></u
+sr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/
+bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/
+share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
+Output written on profiler2.pdf (8 pages, 73772 bytes).

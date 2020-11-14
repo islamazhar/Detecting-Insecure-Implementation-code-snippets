@@ -1,0 +1,8 @@
+\BOOKMARK [1][-]{section.1}{Class file Attributes}{}
+\BOOKMARK [1][-]{section.2}{Soot Hosts and Tags}{}
+\BOOKMARK [1][-]{section.3}{Adding Class and Method Attributes}{}
+\BOOKMARK [1][-]{section.4}{Adding Code Attributes}{}
+\BOOKMARK [2][-]{subsection.4.1}{Tagging Units in Soot}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Tag Aggregators}{section.4}
+\BOOKMARK [2][-]{subsection.4.3}{CodeAttribute Binary Format}{section.4}
+\BOOKMARK [1][-]{section.5}{History}{}

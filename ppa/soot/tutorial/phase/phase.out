@@ -1,0 +1,111 @@
+\BOOKMARK [1][-]{section.1}{Jimple Body Creation \(jb\)}{}
+\BOOKMARK [2][-]{subsection.1.1}{Local Splitter \(jb.ls\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.2}{Jimple Local Aggregator \(jb.a\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.3}{Unused Local Eliminator \(jb.ule\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.4}{Type Assigner \(jb.tr\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.5}{Unsplit-originals Local Packer \(jb.ulp\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.6}{Local Name Standardizer \(jb.lns\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.7}{Copy Propagator \(jb.cp\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.8}{Dead Assignment Eliminator \(jb.dae\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.9}{Post-copy propagation Unused Local Eliminator \(jb.cp-ule\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.10}{Local Packer \(jb.lp\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.11}{Nop Eliminator \(jb.ne\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.12}{Unreachable Code Eliminator \(jb.uce\)}{section.1}
+\BOOKMARK [2][-]{subsection.1.13}{Trap Tightener \(jb.tt\)}{section.1}
+\BOOKMARK [1][-]{section.2}{Java To Jimple Body Creation \(jj\)}{}
+\BOOKMARK [2][-]{subsection.2.1}{Local Splitter \(jj.ls\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Jimple Local Aggregator \(jj.a\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.3}{Unused Local Eliminator \(jj.ule\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{Type Assigner \(jj.tr\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.5}{Unsplit-originals Local Packer \(jj.ulp\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.6}{Local Name Standardizer \(jj.lns\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.7}{Copy Propagator \(jj.cp\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.8}{Dead Assignment Eliminator \(jj.dae\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.9}{Post-copy propagation Unused Local Eliminator \(jj.cp-ule\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.10}{Local Packer \(jj.lp\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.11}{Nop Eliminator \(jj.ne\)}{section.2}
+\BOOKMARK [2][-]{subsection.2.12}{Unreachable Code Eliminator \(jj.uce\)}{section.2}
+\BOOKMARK [1][-]{section.3}{Call Graph Constructor \(cg\)}{}
+\BOOKMARK [2][-]{subsection.3.1}{Class Hierarchy Analysis \(cg.cha\)}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Spark \(cg.spark\)}{section.3}
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Spark General Options}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Spark Pointer Assignment Graph Building Options}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Spark Pointer Assignment Graph Simplification Options}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Spark Points-To Set Flowing Options}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Spark Output Options}{subsection.3.2}
+\BOOKMARK [2][-]{subsection.3.3}{Paddle \(cg.paddle\)}{section.3}
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Paddle General Options}{subsection.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Paddle Context Sensitivity Options}{subsection.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Paddle Pointer Assignment Graph Building Options}{subsection.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Paddle Points-To Set Flowing Options}{subsection.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.5}{Paddle Output Options}{subsection.3.3}
+\BOOKMARK [1][-]{section.4}{Whole Shimple Transformation Pack \(wstp\)}{}
+\BOOKMARK [1][-]{section.5}{Whole Shimple Optimization Pack \(wsop\)}{}
+\BOOKMARK [1][-]{section.6}{Whole-Jimple Transformation Pack \(wjtp\)}{}
+\BOOKMARK [1][-]{section.7}{Whole-Jimple Optimization Pack \(wjop\)}{}
+\BOOKMARK [2][-]{subsection.7.1}{Static Method Binder \(wjop.smb\)}{section.7}
+\BOOKMARK [2][-]{subsection.7.2}{Static Inliner \(wjop.si\)}{section.7}
+\BOOKMARK [1][-]{section.8}{Whole-Jimple Annotation Pack \(wjap\)}{}
+\BOOKMARK [2][-]{subsection.8.1}{Rectangular Array Finder \(wjap.ra\)}{section.8}
+\BOOKMARK [2][-]{subsection.8.2}{Unreachable Method Tagger \(wjap.umt\)}{section.8}
+\BOOKMARK [2][-]{subsection.8.3}{Unreachable Fields Tagger \(wjap.uft\)}{section.8}
+\BOOKMARK [2][-]{subsection.8.4}{Tightest Qualifiers Tagger \(wjap.tqt\)}{section.8}
+\BOOKMARK [2][-]{subsection.8.5}{Call Graph Grapher \(wjap.cgg\)}{section.8}
+\BOOKMARK [2][-]{subsection.8.6}{Purity Analysis [AM] \(wjap.purity\)}{section.8}
+\BOOKMARK [1][-]{section.9}{Shimple Control \(shimple\)}{}
+\BOOKMARK [1][-]{section.10}{Shimple Transformation Pack \(stp\)}{}
+\BOOKMARK [1][-]{section.11}{Shimple Optimization Pack \(sop\)}{}
+\BOOKMARK [2][-]{subsection.11.1}{Shimple Constant Propagator and Folder \(sop.cpf\)}{section.11}
+\BOOKMARK [1][-]{section.12}{Jimple Transformation Pack \(jtp\)}{}
+\BOOKMARK [1][-]{section.13}{Jimple Optimization Pack \(jop\)}{}
+\BOOKMARK [2][-]{subsection.13.1}{Common Subexpression Eliminator \(jop.cse\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.2}{Busy Code Motion \(jop.bcm\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.3}{Lazy Code Motion \(jop.lcm\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.4}{Copy Propagator \(jop.cp\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.5}{Jimple Constant Propagator and Folder \(jop.cpf\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.6}{Conditional Branch Folder \(jop.cbf\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.7}{Dead Assignment Eliminator \(jop.dae\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.8}{Unreachable Code Eliminator 1 \(jop.uce1\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.9}{Unconditional Branch Folder 1 \(jop.ubf1\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.10}{Unreachable Code Eliminator 2 \(jop.uce2\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.11}{Unconditional Branch Folder 2 \(jop.ubf2\)}{section.13}
+\BOOKMARK [2][-]{subsection.13.12}{Unused Local Eliminator \(jop.ule\)}{section.13}
+\BOOKMARK [1][-]{section.14}{Jimple Annotation Pack \(jap\)}{}
+\BOOKMARK [2][-]{subsection.14.1}{Null Pointer Checker \(jap.npc\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.2}{Null Pointer Colourer \(jap.npcolorer\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.3}{Array Bound Checker \(jap.abc\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.4}{Profiling Generator \(jap.profiling\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.5}{Side Effect tagger \(jap.sea\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.6}{Field Read/Write Tagger \(jap.fieldrw\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.7}{Call Graph Tagger \(jap.cgtagger\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.8}{Parity Tagger \(jap.parity\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.9}{Parameter Alias Tagger \(jap.pat\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.10}{Live Variables Tagger \(jap.lvtagger\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.11}{Reaching Defs Tagger \(jap.rdtagger\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.12}{Cast Elimination Check Tagger \(jap.che\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.13}{Unreachable Method Transformer \(jap.umt\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.14}{Loop Invariant Tagger \(jap.lit\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.15}{Available Expressions Tagger \(jap.aet\)}{section.14}
+\BOOKMARK [2][-]{subsection.14.16}{Dominators Tagger \(jap.dmt\)}{section.14}
+\BOOKMARK [1][-]{section.15}{Grimp Body Creation \(gb\)}{}
+\BOOKMARK [2][-]{subsection.15.1}{Grimp Pre-folding Aggregator \(gb.a1\)}{section.15}
+\BOOKMARK [2][-]{subsection.15.2}{Grimp Constructor Folder \(gb.cf\)}{section.15}
+\BOOKMARK [2][-]{subsection.15.3}{Grimp Post-folding Aggregator \(gb.a2\)}{section.15}
+\BOOKMARK [2][-]{subsection.15.4}{Grimp Unused Local Eliminator \(gb.ule\)}{section.15}
+\BOOKMARK [1][-]{section.16}{Grimp Optimization \(gop\)}{}
+\BOOKMARK [1][-]{section.17}{Baf Body Creation \(bb\)}{}
+\BOOKMARK [2][-]{subsection.17.1}{Load Store Optimizer \(bb.lso\)}{section.17}
+\BOOKMARK [2][-]{subsection.17.2}{Peephole Optimizer \(bb.pho\)}{section.17}
+\BOOKMARK [2][-]{subsection.17.3}{Unused Local Eliminator \(bb.ule\)}{section.17}
+\BOOKMARK [2][-]{subsection.17.4}{Local Packer \(bb.lp\)}{section.17}
+\BOOKMARK [1][-]{section.18}{Baf Optimization \(bop\)}{}
+\BOOKMARK [1][-]{section.19}{Tag Aggregator \(tag\)}{}
+\BOOKMARK [2][-]{subsection.19.1}{Line Number Tag Aggregator \(tag.ln\)}{section.19}
+\BOOKMARK [2][-]{subsection.19.2}{Array Bounds and Null Pointer Check Tag Aggregator \(tag.an\)}{section.19}
+\BOOKMARK [2][-]{subsection.19.3}{Dependence Tag Aggregator \(tag.dep\)}{section.19}
+\BOOKMARK [2][-]{subsection.19.4}{Field Read/Write Tag Aggregator \(tag.fieldrw\)}{section.19}
+\BOOKMARK [1][-]{section.20}{Dava Body Creation \(db\)}{}
+\BOOKMARK [2][-]{subsection.20.1}{Transformations \(db.transformations\)}{section.20}
+\BOOKMARK [2][-]{subsection.20.2}{Renamer \(db.renamer\)}{section.20}
+\BOOKMARK [2][-]{subsection.20.3}{De-obfuscate \(db.deobfuscate\)}{section.20}
+\BOOKMARK [2][-]{subsection.20.4}{Force Recompilability \(db.force-recompile\)}{section.20}

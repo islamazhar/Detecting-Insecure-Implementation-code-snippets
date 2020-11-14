@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
+   sodipodi:docname="workflow.svg">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="marker1310"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.2) rotate(180) translate(6,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1308" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1274"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.2) rotate(180) translate(6,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1272" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1244"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.2) rotate(180) translate(6,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1242" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Send"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.2) rotate(180) translate(6,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path977" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="311.56412"
+     inkscape:cy="477.19319"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1868"
+     inkscape:window-height="1016"
+     inkscape:window-x="52"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.094429;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect833"
+       width="22.214563"
+       height="4.9938111"
+       x="79.288406"
+       y="111.46146" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.0711089;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect833-3"
+       width="14.509582"
+       height="4.3356552"
+       x="82.330559"
+       y="119.00037" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.05206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.0763018"
+       x="75.910294"
+       y="122.76846"
+       id="text852"
+       transform="scale(1.0674387,0.93682193)"><tspan
+         sodipodi:role="line"
+         id="tspan850"
+         x="75.910294"
+         y="122.76846"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.0763018">Code Snippets</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.50983px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.087746"
+       x="93.436958"
+       y="113.48627"
+       id="text852-6"
+       transform="scale(0.92821888,1.0773321)"><tspan
+         sodipodi:role="line"
+         id="tspan850-7"
+         x="93.436958"
+         y="113.48627"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.087746">AST</tspan></text>
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.191609;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path872"
+       cx="77.807251"
+       cy="131.57742"
+       rx="10.342565"
+       ry="3.4899912" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.16335px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.0790839"
+       x="68.141998"
+       y="136.43636"
+       id="text876"
+       transform="scale(1.0298874,0.97097992)"><tspan
+         sodipodi:role="line"
+         id="tspan874"
+         x="68.141998"
+         y="136.43636"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.0790839">Synthesizer</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.166398;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect833-5"
+       width="44.191864"
+       height="7.7949381"
+       x="69.185364"
+       y="142.56544" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.11085px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.0777713"
+       x="72.727715"
+       y="148.90669"
+       id="text895"
+       transform="scale(1.0259177,0.97473705)"><tspan
+         sodipodi:role="line"
+         x="72.727715"
+         y="148.90669"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.0777713"
+         id="tspan897">Specification of common </tspan><tspan
+         sodipodi:role="line"
+         x="72.727715"
+         y="152.83611"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.0777713"
+         id="tspan899">secure code patterns</tspan></text>
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.35593;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path919"
+       cx="102.42632"
+       cy="132.00417"
+       rx="11.190162"
+       ry="5.6085849" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.07406px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.0768519"
+       x="93.441605"
+       y="131.12006"
+       id="text895-3"
+       transform="scale(1.0001301,0.99986991)"><tspan
+         sodipodi:role="line"
+         x="93.441605"
+         y="131.12006"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.0768519"
+         id="tspan899-2">Secure code </tspan><tspan
+         sodipodi:role="line"
+         x="93.441605"
+         y="135.00301"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.0768519"
+         id="tspan950">suggestions</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.230075px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Send)"
+       d="m 90.110171,116.48648 0.0507,2.23064"
+       id="path960" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.285808px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1244)"
+       d="m 89.752764,123.47384 -9.570128,4.53157"
+       id="path1240" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1274)"
+       d="M 88.945642,142.32301 78.123179,134.96395"
+       id="path1270" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1310)"
+       d="m 88.558454,131.65238 h 2.347108"
+       id="path1306" />
+  </g>
+</svg>

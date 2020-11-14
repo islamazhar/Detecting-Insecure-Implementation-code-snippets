@@ -184,6 +184,16 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
@@ -255,8 +265,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
@@ -266,6 +274,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/inconsolata/t1-zi4r-4.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/inconsolata/t1-zi4r-4.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/nxlmi.tfm
@@ -281,16 +294,16 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/nxlmia.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png.eps
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png.eps
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png.eps
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png-eps-converted-to.pdf
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png-eps-converted-to.pdf
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png.eps
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png-eps-converted-to.pdf
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png-eps-converted-to.pdf
-INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/Selection_011.png-eps-converted-to.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1.tfm
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow.eps
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow.eps
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow.eps
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow-eps-converted-to.pdf
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow-eps-converted-to.pdf
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow.eps
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow-eps-converted-to.pdf
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow-eps-converted-to.pdf
+INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/Figures/workflow-eps-converted-to.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinBiolinumTB-tlf-t1.vf
@@ -300,11 +313,13 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntxsy.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf-t1.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineTI-tlf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
@@ -313,13 +328,16 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinBiolinumT-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinBiolinumTI-tlf-t1.tfm
 INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/sample-lualatex.bbl
 INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/sample-lualatex.bbl
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinBiolinumT-tlf-t1.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinBiolinumT-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinBiolinumT-tlf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinBiolinumT-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinBiolinumTI-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinBiolinumTI-tlf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/libertine/LinLibertineTI-tlf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1--base.tfm
 INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/sample-lualatex.aux
@@ -327,10 +345,13 @@ INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification an
 INPUT /home/islamazhar/Dropbox/UW-Madison-courses/CS-703-Program verification and synthesis/Project/acmart-master/sample-lualatex.out
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb

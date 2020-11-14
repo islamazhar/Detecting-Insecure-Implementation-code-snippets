@@ -1,0 +1,21 @@
+## Location of Polyglot classes jar file
+polyglot.jar=${user.home}/autobuild/releases/polyglotclasses-1.3.2.jar
+
+## Location of Jasmin classes jar file
+jasmin.jar=${user.home}/autobuild/releases/jasminclasses-2.2.3.jar
+
+## Location of Eclipse installation.
+## This should have a directory called plugins in it.
+eclipse.loc=${user.home}/autobuild/resources/eclipse/
+
+## Version of Soot for tagging tarballs.
+soot.version=2.2.3
+
+## Location in which to generate Soot release tarballs.
+release.loc=${user.home}/autobuild/releases/
+
+## URL for Java API documentation, for resolving things like
+## {@link Iterator} when generating documentation from 
+## javadoc comments.
+javaapi.url=http://java.sun.com/j2se/1.4.2/docs/api/
+

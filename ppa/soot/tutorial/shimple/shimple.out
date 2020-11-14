@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Why Shimple?}{}
+\BOOKMARK [1][-]{section.2}{Hacking Overview}{}
+\BOOKMARK [1][-]{section.3}{Usage Options}{}
+\BOOKMARK [1][-]{section.4}{Command Line Walk Through}{}
+\BOOKMARK [2][-]{subsection.4.1}{Producing Jimple}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Producing Shimple}{section.4}
+\BOOKMARK [3][-]{subsubsection.4.2.1}{A Digression on Shimple Pointers}{subsection.4.2}
+\BOOKMARK [2][-]{subsection.4.3}{Producing Jimple, Again}{section.4}
+\BOOKMARK [2][-]{subsection.4.4}{Applying Shimple Optimizations}{section.4}
+\BOOKMARK [1][-]{section.5}{Thanks and Credits}{}
+\BOOKMARK [1][-]{section.6}{Future Work}{}
+\BOOKMARK [2][-]{subsection.6.1}{Partial To-Do List}{section.6}
+\BOOKMARK [2][-]{subsection.6.2}{Known Issues}{section.6}
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Issue 1}{subsection.6.2}
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Issue 2}{subsection.6.2}
