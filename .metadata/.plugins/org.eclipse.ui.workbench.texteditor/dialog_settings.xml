@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="class_1335"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="CertificadoAceptar"/>
+			<item value="MainActivity"/>
+			<item value="CustomSSLSocketFactory"/>
+			<item value="MySSLSocketFactory"/>
+			<item value="ClientSSLSocketFactory"/>
+			<item value="&amp;lt;"/>
+			<item value="&amp;gt;"/>
+			<item value="readHTTPContents"/>
+			<item value="class_120"/>
+			<item value="MessageDigest"/>
+			<item value="MD5"/>
+			<item value="MD6"/>
+			<item value="SSL"/>
+			<item value="HelloWorld"/>
+			<item value="AES "/>
+		</list>
+		<list key="replacehistory">
+			<item value="class_1335"/>
+			<item value="class_135"/>
+			<item value="class_130"/>
+			<item value="class_122"/>
+			<item value="class_103"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="753"/>
+		<item key="DIALOG_Y_ORIGIN" value="245"/>
+		<item key="DIALOG_WIDTH" value="348"/>
+		<item key="DIALOG_HEIGHT" value="437"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+</section>

@@ -1,0 +1,84 @@
+package examples;
+
+
+
+import java.util.Iterator;
+import java.util.List;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Set;
+
+import soot.Body;
+import soot.SootClass;
+import soot.SootMethod;
+import soot.Unit;
+import soot.jimple.parser.*;
+import soot.toolkits.graph.ExceptionalUnitGraph;
+import soot.toolkits.graph.UnitGraph;
+
+public class BuildAST {
+	public static void main(String args[]) {
+		String file_location = "/home/islamazhar/eclipse-workspace/PPA/src/test.ppa.C.jimple";
+		FileInputStream aJIS;
+		try {
+			aJIS = new FileInputStream(new File(file_location));
+			JimpleAST jimpleAST = new JimpleAST(aJIS);
+			SootClass soot_class = jimpleAST.createSootClass();
+			List methods = soot_class.getMethods();
+			Iterator it = methods.iterator();
+			/*
+			while (it.hasNext()) {
+				final SootMethod method = (SootMethod) it.next();
+				System.out.println(method);
+				Body initBody  = jimpleAST.getBody(method);
+				System.out.println(initBody);
+			}
+			*/
+			SootClass sClass = soot_class;
+			for (Object oMethod : sClass.getMethods()) {
+				SootMethod sMethod = (SootMethod) oMethod;
+				System.out.println("Method signature is "+ sMethod.getSignature());
+				for (Object oUnit : sMethod.retrieveActiveBody().getUnits()) {
+					Unit unit = (Unit) oUnit;
+					System.out.println("  " + unit.toString());
+				}
+			}
+			
+			//System.out.println(methods[1]);
+			//jimpleAST.getBody()
+			/*
+			SootClass soot_class = jimpleAST.createSootClass();
+			//jimpleAST.getSkeleton(soot_class);
+			//System.out.println(soot_class);
+			List methods = soot_class.getMethods();
+			Iterator it = methods.iterator();
+			
+			while (it.hasNext()) {
+				final SootMethod method = (SootMethod) it.next();
+				Body initBody  = jimpleAST.getBody(method);
+				UnitGraph graph = new ExceptionalUnitGraph(initBody);
+				if(graph != null) { 
+					System.out.println(graph);
+				}
+				
+				for (Object aGraph : graph) {
+					System.out.println(aGraph);
+				}
+				
+			}
+			*/
+			/*
+			for (String method: methods) {
+				System.out.println(jimpleAST.getBody(cst));
+			}
+			//System.out.println(jimpleAST.getCstPool());
+			//String[] methods = soot_class.getMethods();
+			*/
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
