@@ -1,9 +1,6 @@
-// 4
-package examples.AES;
-
-public class class_93{
-
-	FileInputStream fis = new FileInputStream(new File("D:/Shashank/inputVideo.avi"));
+package examples.AES; 
+public class class_93 { 
+FileInputStream fis = new FileInputStream(new File("D:/Shashank/inputVideo.avi"));
         File outfile = new File("D:/Shashank/encVideo.avi");
         int read;
         if(!outfile.exists())
@@ -36,5 +33,5 @@ public class class_93{
             cos.flush();
         }
     cos.close(); 
-	}
+
 }

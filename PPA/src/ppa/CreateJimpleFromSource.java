@@ -6,22 +6,29 @@ import polyglot.frontend.SourceJob;
 import polyglot.visit.NodeVisitor;
 import soot.Body;
 import soot.BodyTransformer;
+import soot.Local;
 import soot.PackManager;
 import soot.Scene;
 import soot.SootClass;
 import soot.Transform;
 import soot.Unit;
+import soot.Value;
+import soot.ValueBox;
 import soot.javaToJimple.ppa.PPAEngine;
 import soot.javaToJimple.ppa.jj.PPAExtensionInfo;
+import soot.jimple.internal.JAssignStmt;
 import soot.jimple.internal.JIfStmt;
 import soot.jimple.internal.JInvokeStmt;
 import soot.options.Options;
 import soot.tagkit.AbstractHost;
 import soot.tagkit.LineNumberTag;
 
+import java.io.BufferedReader;
+
 // import org.eclipse.jdt.core.dom.PPAEngine;
 
 import java.io.File;
+import java.io.FileReader;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -38,14 +45,40 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 	private final static String SRC_CLASSPATH = "/home/islamazhar/eclipse-workspace/PPA/src/";
 	
 	//private final static String CLASS_TO_ANALYZE = "ppa.HelloThread";
-	private final static String CLASS_TO_ANALYZE = "examples.usingHTTP.class_131";
+	private final static String CLASS_TO_ANALYZE = "examples.AES.class_";
 	
 	private final static String OUTPUT_DIR = "examples/output";
 	
 	/**
 	 * @param args
 	 */
+	
 	public static void main(String[] args)  {
+	
+		String in_file = "array_index.txt";
+		String line = null;
+		String class_to_analyze = null;
+		int count = 0;
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(in_file)); 
+			while ((line = br.readLine()) != null) {
+				try {
+					soot.G.reset();
+					class_to_analyze = CLASS_TO_ANALYZE + Integer.parseInt(line);
+					convert_to_jimple(class_to_analyze);
+					System.out.println(class_to_analyze);
+					count ++;
+				}catch(Exception ex) {
+					//count --;
+					//System.out.println("Can not process class_"+ class_to_analyze);
+				}
+			}
+		}catch(Exception ex){
+			
+		}
+		System.out.println(count);
+	}
+	public static void convert_to_jimple(String class_to_analyze) throws Exception {
 		Scene scene = null;
 		Options opt = Options.v();
 		String classpath = RT_CLASSPATH + File.pathSeparator + SRC_CLASSPATH;
@@ -55,7 +88,7 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 		opt.set_src_prec(Options.src_prec_java);
 		opt.set_soot_classpath(classpath);
 		opt.set_keep_line_number(true);
-		opt.classes().add(CLASS_TO_ANALYZE);
+		opt.classes().add(class_to_analyze);
 		scene = Scene.v();
 		scene.loadNecessaryClasses();
 		
@@ -87,22 +120,44 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 		PackManager.v().getPack("jtp").add(new Transform("jtp.TestSoot", analysis));
 		
 		Options.v().set_app(true);
-		SootClass appclass = Scene.v().loadClassAndSupport(CLASS_TO_ANALYZE);
+		SootClass appclass = Scene.v().loadClassAndSupport(class_to_analyze);
 		scene.setMainClass(appclass);
 		PackManager.v().runPacks();
 		// getting heSoot class of interests...
-		
-		
 	}
 	@Override
-	protected void internalTransform(Body b, String phaseName, Map options) {
+	protected void internalTransform(Body b, String phaseName, Map options){
 			Iterator<Unit> it = b.getUnits().snapshotIterator();
+			//System.out.println(b.getDefBoxes());
+			
 		    while(it.hasNext()){
-		    	Object stmt = it.next();
+		    	Unit stmt = it.next();
 		    	//System.out.println(it.next().getClass());
 		    	//System.out.println(stmt.toString());
-		    //	System.out.println(stmt.getClass());
-		    	System.out.println(stmt);
+		    	//System.out.println(stmt.getClass());
+		    	//if (stmt instanceof JAssignStmt) {
+		    	//	JAssignStmt jAssignStmt = (JAssignStmt) stmt;
+		    		//System.out.println("RightBox " + jAssignStmt.rightBox + " "+ "LeftBox " +jAssignStmt.leftBox);
+		    		//System.out.println(stmt);
+		    		// since this static analysis I can not get the dynamic value of 
+		    		// variable.
+		    	//}
+		    	if (stmt.toString().contains("getInstance")) {
+		    		//System.out.println(stmt.getClass() + " --> " + stmt);
+			    	//System.out.println(stmt.getUseBoxes().get(0).getClass());
+		    		//System.out.println(stmt.getBoxesPointingToThis());
+		    		if (stmt.toString().contains("Cipher")) {
+		    			int s = stmt.toString().indexOf(">")+1;
+		    			int e = stmt.toString().indexOf(")", s)+1;
+		    			String param = stmt.toString().substring(s, e);
+		    	//		System.out.println(param);
+		    			
+		    			//System.out.println(stmt.getClass());
+		    			//JAssignStmt jAssignStmt = (JAssignStmt) stmt;
+		    			//System.out.println("RightBox " + jAssignStmt.rightBox + " "+ "LeftBox " +jAssignStmt.leftBox);
+		    		}
+		    	}
+		    	// [VB(hashAlgo), VB("MD5")]
 		    	/*
 		    	if (stmt.getClass() == JInvokeStmt.class) {
 		    		JInvokeStmt jInvokStmt = (JInvokeStmt) stmt;

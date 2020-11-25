@@ -1,7 +1,6 @@
-// 3
+package examples.AES; 
+public class class_72 { 
     /* User types in their password: */
-package examples.AES;
-public class class_72{
     String password = "password";
 
     /* Store these things on disk used to derive key later: */
@@ -22,4 +21,5 @@ public class class_72{
                 .getInstance("PBKDF2WithHmacSHA1");
     byte[] keyBytes = keyFactory.generateSecret(keySpec).getEncoded();
     SecretKey key = new SecretKeySpec(keyBytes, "AES");
+
 }

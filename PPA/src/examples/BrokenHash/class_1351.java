@@ -12,7 +12,8 @@ public class class_1351 {
 	        System.err.println(str);        
 	
 	        //Generate MD5 Java
-	        MessageDigest md = MessageDigest.getInstance("MD5");
+	        String hashAlgo = "MD5";
+	        MessageDigest md = MessageDigest.getInstance(hashAlgo);
 	        md.update("password".getBytes());        
 	        byte byteData[] = md.digest();
 	        System.err.println(new String(byteData));        

@@ -1,18 +1,14 @@
-    // 3
-
 package examples.AES; 
+    import java.security.SecureRandom;
 
-import java.security.SecureRandom;
+    import javax.crypto.Cipher;
+    import javax.crypto.KeyGenerator;
+    import javax.crypto.SecretKey;
+    import javax.crypto.spec.SecretKeySpec;
 
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import android.util.Base64;
+    import android.util.Base64;
 
-public class class_92{
-
-    public class StringCryptor 
+    public class class_92 
     {
         private static final String CIPHER_ALGORITHM = "AES";
         private static final String RANDOM_GENERATOR_ALGORITHM = "SHA1PRNG";
@@ -59,4 +55,3 @@ public class class_92{
             return secretKey.getEncoded();
         }
     }
-}

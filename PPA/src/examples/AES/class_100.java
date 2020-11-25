@@ -1,6 +1,5 @@
-// 2
-package examples.AES;
-public class class_100{
+package examples.AES; 
+public class class_100 {
 
     public static SecretKey generateAESKey(int bits) throws NoSuchAlgorithmException{
         //This method is provided as to securely generate a AES key of the given length.
@@ -22,7 +21,7 @@ public class class_100{
 
         //Create the cipher object to perform AES operations.
         //Specify Advanced Encryption Standard - Cipher Feedback Mode - No Padding
-        Cipher AESCipher = Cipher("AES/CFB/NoPadding");
+        Cipher AESCipher = Cipher.getInstance("AES/CFB/NoPadding");
 
         //Initialize the Cipher with the key and initialization vector.
         AESCipher.init(Cipher.ENCRYPT_MODE, key, IVSpec);
@@ -97,4 +96,3 @@ public class class_100{
         System.out.println("Decrypted message: " + decryptedMessage);
     }
 }
-

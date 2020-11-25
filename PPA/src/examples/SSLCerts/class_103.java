@@ -15,7 +15,7 @@ public class class_103 extends SSLCertificateSocketFactory {
                 public X509Certificate[] getAcceptedIssuers() {
                     return null;
                 }
-            };
+            }; // annoymous class.
             sslContext = SSLContext.getInstance("TLS");
             sslContext.init(null, new TrustManager[] { tm }, null);
 
@@ -27,12 +27,12 @@ public class class_103 extends SSLCertificateSocketFactory {
         }
     }
 
-    @Override
+   // @Override
     public Socket createSocket(Socket socket, String host, int port, boolean autoClose) throws IOException, UnknownHostException {
         return sslContext.getSocketFactory().createSocket(socket, host, port, autoClose);
     }
 
-    @Override
+   // @Override
     public Socket createSocket() throws IOException {
         return sslContext.getSocketFactory().createSocket();
     }

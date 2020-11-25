@@ -1,6 +1,4 @@
-// 4
-package examples.AES;
-
+package examples.AES; 
 import java.io.UnsupportedEncodingException;
 import java.security.Security;
 import java.security.spec.KeySpec;
@@ -15,7 +13,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-public class class_97{
+public class class_97 {
 
     private final static String HEX = "0123456789ABCDEF";
     private final static String ENC = "US-ASCII";
@@ -94,23 +92,22 @@ public class class_97{
     public static byte[] toByte(String hexString) {
         int len = hexString.length()/2;
         byte[] result = new byte[len];
-        for (int i = 0; i &lt; len; i++)
+        for (int i = 0; i < len; i++)
             result[i] = Integer.valueOf(hexString.substring(2*i, 2*i+2), 16).byteValue();
         return result;
     }
 
     public static String toHex(byte[] buf) {
         if (buf == null)
-            return "";
+            return ";
         StringBuffer result = new StringBuffer(2*buf.length);
-        for (int i = 0; i &lt; buf.length; i++) {
+        for (int i = 0; i < buf.length; i++) {
             appendHex(result, buf[i]);
         }
         return result.toString();
     }
 
     private static void appendHex(StringBuffer sb, byte b) {
-        sb.append(HEX.charAt((b&gt;&gt;4)&amp;0x0f)).append(HEX.charAt(b&amp;0x0f));
+        sb.append(HEX.charAt((b>>4)&0x0f)).append(HEX.charAt(b&0x0f));
     }
 }
-

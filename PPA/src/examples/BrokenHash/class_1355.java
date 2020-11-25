@@ -1,3 +1,4 @@
+package examples.BrokenHash;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;
@@ -14,7 +15,7 @@ import javax.crypto.spec.SecretKeySpec;
 import android.util.Base64;
 import android.util.Log;
 
-public class class_146 {
+public class class_1355 {
      public static final String TAG = "smsfwd";
 
         private static Cipher aesCipher;
