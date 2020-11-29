@@ -1,0 +1,91 @@
+\usepackage{cleveref}
+\usepackage{graphics}
+\settopmatter{printacmref=false}
+\setcopyright{none}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+\crefformat{section}{\S#2#1#3}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{upquote}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2,
+  keepspaces=true,
+  language=java, 
+  moredelim=[is][\underbar]{_}{_}
+}
+
+\lstset{style=mystyle}
+
+
+\usepackage[most]{tcolorbox}
+
+%textmarker style from colorbox doc
+\tcbset{textmarker/.style={%
+        enhanced,
+        parbox=false,boxrule=0mm,boxsep=0mm,arc=0mm,
+        outer arc=0mm,left=6mm,right=3mm,top=7pt,bottom=7pt,
+        toptitle=1mm,bottomtitle=1mm,oversize}}
+
+
+% define new colorboxes
+\newtcolorbox{hintBox}{textmarker,
+    borderline west={6pt}{0pt}{yellow},
+    colback=yellow!10!white}
+\newtcolorbox{importantBox}{textmarker,
+    borderline west={6pt}{0pt}{red},
+    colback=red!10!white}
+\newtcolorbox{noteBox}{textmarker,
+    borderline west={6pt}{0pt}{green},
+    colback=green!10!white}
+
+% define commands for easy access
+\newcommand{\note}[1]{\begin{noteBox} \textbf{Note:} #1 \end{noteBox}}
+\newcommand{\warning}[1]{\begin{hintBox} \textbf{Warning:} #1 \end{hintBox}}
+\newcommand{\important}[1]{\begin{importantBox} \textbf{Important:} #1 \end{importantBox}}
+
+
+
+
+\newcounter{mynote}[section]
+\newcommand{\notecolor}{blue}
+\newcommand{\thenote}{\thesection.\arabic{mynote}}
+\newcommand{\tnote}[1]{\ifnum\authnote=1\refstepcounter{mynote}{\bf \textcolor{\notecolor}{$\ll$TomR~\thenote: {\sf #1}$\gg$}}\fi}
+
+\newcommand{\fixme}[1]{\ifnum\authnote=1{\textcolor{red}{[FIXME: #1]}}\fi}
+\newcommand{\better}[1]{\ifnum\authnote=1{\textcolor{violet}{[BetterWord: #1]}}\fi}
+\newcommand{\todo}[1]{\ifnum\authnote=1{\textcolor{red}{[TODO: #1]}}\fi}
+
+\newcommand{\new}[1]{\textcolor{blue}{#1}}
+
+%% ------------------------- Damon -----------------------
+
+\newcommand{\minote}[1]{{\bf \textcolor{red}{$\ll$Mazharul~\thenote: {\sf #1}$\gg$}}}

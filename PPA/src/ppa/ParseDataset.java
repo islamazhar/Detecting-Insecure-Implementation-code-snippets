@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ParseDataset {
 
 	public static void main(String[] args) {
-		String out_folder = "/home/islamazhar/eclipse-workspace/PPA/src/examples/AES/";
+		String out_folder = "/home/islamazhar/eclipse-workspace/PPA/src/examples/BrokenHash/";
 		String in_file = "/home/islamazhar/eclipse-workspace/answer_snippets.annotations.csv";
 		ParseDataset parseDataset = new ParseDataset();
 		parseDataset.generate_code_snippets(in_file, out_folder);
@@ -24,7 +24,7 @@ public class ParseDataset {
 	 * 
 	 */
 	public String insert_package_name(String line) {
-		return "package examples.AES" + '\n' + line;
+		return "package examples.BrokenHash" + '\n' + line;
 	}
 	/*
 	 * 
@@ -71,6 +71,8 @@ public class ParseDataset {
 		int start = 0;
 		String class_name = "";
 		boolean flag = false;
+		String [] patterns = {"AES"};
+		//String [] patterns = {"MD5", "SHA1"};
 		boolean added_class_name = false;
 		try {
 			FileWriter array_index = new FileWriter("array_index.txt");
@@ -133,8 +135,10 @@ public class ParseDataset {
 						line = "// " + line; 
 					}
 					code.add(line);
-					if (line.contains("AES")) {
-						flag = true;
+					for(String pattern : patterns) {
+						if (line.contains(pattern)) {
+							flag = true;
+						}
 					}
 				}
 			}

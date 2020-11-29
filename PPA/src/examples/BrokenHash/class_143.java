@@ -1,26 +1,25 @@
-package examples.BrokenHash;
+package examples.AES; 
+public class class_143 { 
+public static final byte[] md5(String s) { 
+    try { 
 
-public class class_143 {
-	public static String hashKeyForDisk(String key) {
-	    String cacheKey;
-	    try {
-	        final MessageDigest mDigest = MessageDigest.getInstance("MD5");
-	        if (key == null) {
-	            Log.e("TEST","key = null");
-	            throw new IllegalArgumentException(" key == null");
-	        }
-	
-	        if (mDigest == null) {
-	            Log.e("TEST","mDigest = null");
-	
-	            return String.valueOf(key.hashCode());
-	        }
-	        byte[] bytes = key.getBytes();
-	        mDigest.update(bytes);
-	        cacheKey = bytesToHexString(mDigest.digest());
-	    } catch (NoSuchAlgorithmException e) {
-	        cacheKey = String.valueOf(key.hashCode());
-	    }
-	    return cacheKey;
-	}
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        byte[] messageDigest = md.digest(s.getBytes("UTF-8"));
+
+        String md5 = EncodingUtils.getString(messageDigest, "UTF-8");
+
+        Log.i("Function MD5", md5);
+        Log.i("Function MD5 Length","Length: "+ md5.length());
+
+        return messageDigest;
+
+    } catch (NoSuchAlgorithmException e) {
+        e.printStackTrace();
+    } catch (UnsupportedEncodingException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    } 
+    return null;
+}   
+
 }

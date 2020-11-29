@@ -69,14 +69,14 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 					System.out.println(class_to_analyze);
 					count ++;
 				}catch(Exception ex) {
-					//count --;
+					count --;
 					//System.out.println("Can not process class_"+ class_to_analyze);
 				}
 			}
 		}catch(Exception ex){
 			
 		}
-		System.out.println(count);
+		System.out.println("Count = " + count);
 	}
 	public static void convert_to_jimple(String class_to_analyze) throws Exception {
 		Scene scene = null;
@@ -133,7 +133,7 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 		    while(it.hasNext()){
 		    	Unit stmt = it.next();
 		    	//System.out.println(it.next().getClass());
-		    	//System.out.println(stmt.toString());
+		    	System.out.println(stmt.toString());
 		    	//System.out.println(stmt.getClass());
 		    	//if (stmt instanceof JAssignStmt) {
 		    	//	JAssignStmt jAssignStmt = (JAssignStmt) stmt;

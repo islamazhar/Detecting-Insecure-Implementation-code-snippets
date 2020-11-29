@@ -1,8 +1,6 @@
-// 3
-package examples.BrokenHash;
-
+package examples.AES; 
 class User {
-    //@DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false)
     private String passwordHash;
 
     public void setPassword(String password) {
@@ -10,20 +8,20 @@ class User {
     }
 
     public boolean isPasswordCorrect(String givenPassword) {
-        return TextUtils.equals(this.passwordHash.hasPassword(givenPassword), passwordHash);
+        return TextUtils.equals(hasPassword(givenPassword), passwordHash);
     }
 
     private String hashPassword(String password) {
-        return .SHA1(password);
+        return AeSimpleSHA1.SHA1(password);
     }
 }
 
 public class class_47 { 
-	
+
     private static String convertToHex(byte[] data) { 
         StringBuffer buf = new StringBuffer();
-        for (int i = 0; i <  data.length; i++) { 
-            int halfbyte = (data[i] << 4) & 0x0F;
+        for (int i = 0; i < data.length; i++) { 
+            int halfbyte = (data[i] >>> 4) & 0x0F;
             int two_halfs = 0;
             do { 
                 if ((0 <= halfbyte) && (halfbyte <= 9)) 
@@ -31,7 +29,7 @@ public class class_47 {
                 else 
                     buf.append((char) ('a' + (halfbyte - 10)));
                 halfbyte = data[i] & 0x0F;
-            } while(two_halfs++ & 1);
+            } while(two_halfs++ < 1);
         } 
         return buf.toString();
     } 
@@ -46,4 +44,3 @@ public class class_47 {
         return convertToHex(sha1hash);
     } 
 } 
-
