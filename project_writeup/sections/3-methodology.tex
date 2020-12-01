@@ -1,6 +1,18 @@
 \subsection{Code Repair}
+\begin{itemize}
+    \item Syntax error: illegal characters (\&gt;, \&lt;, \&amp;, ..., ""), match brackets, @Overide, 
+    \item  Missing class and method names: wrapped the code snippets inside a class, called methods without class, package names.
+    \item  importing common crpto classes. 
+\end{itemize}
 \subsection{Converting code snippets to IR}
+\begin{itemize}
+    \item Have used PPA. 
+    \item Talk about Jimple / AST.
+\end{itemize}
+\minote{Add a number on how many code snippets you have been able to convert here..}
 \subsection{Insecure Patterns}
+\minote{How did we come up with these insecure patterns? Say why this is not secure and show one line of example.}
+
 \subsubsection{AES default encryption mode ECB }
 \subsubsection{Insecure cryptographic hash}
 \subsubsection{Presence of AllHostNameVerifier}
@@ -9,5 +21,7 @@
 \subsubsection{Weak key length}
 \subsubsection{Static/constant/predictable keys/IV }
 \subsubsection{Turning of CSRF protection }
+\subsubsection{Explicitly seeding random number.}
 \subsection{Identifying insecure patterns}
-\subsection{Synthesizing secure patterns}
+
+%\subsection{Synthesizing secure patterns}

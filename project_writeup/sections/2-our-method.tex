@@ -3,3 +3,29 @@
   \includegraphics*[width=\linewidth]{Figures/overall-process.png}
   \caption{}
 \end{figure*}
+
+Kye insights
+\begin{itemize}
+  \item Limit analysis to some specifice crypto functions.
+  \item For rule 1, 2, 7, 8 we just did a keyword search on methods we are interested in.
+  \item For 4, 5, 6, 7 we have to do a backword flow analysis. 
+\end{itemize}
+\iffalse
+\begin{table}[ht]
+  \begin{tabular}{lll}
+  \toprule
+  \begin{tabular}[c]{@{}l@{}}Rule\\ No\end{tabular} & Description                                  & Vulnerability                            \\ \midrule 
+  1                                                 & AES default encryption mode ECB              & Side channel attack                      \\ 
+  2                                                 & Insecure cryptographic hash                  & Collision attack                         \\ 
+  3                                                 & Presence of AllHostNameVerifier              & \multicolumn{1}{c|}{SSL/TLS MitM attack} \\ 
+  4                                                 & Abuse of X509TrustManager Verifier Interface &                                          \\ 
+  5                                                 & Absence of performing hostname verification  &                                          \\ 
+  6                                                 & Weak key length                              & Brute force attack                       \\ 
+  7                                                 & Static/constant/predictable keys/IV          &                                          \\ 
+  8                                                 & Turning of CSRF protection                   & CSRF attack                              \\ 
+                                                    &                                              &                                          \\ 
+                                                    Explicitly seeding random number.
+  \bottomrule
+  \end{tabular}
+\end{table}
+\fi
