@@ -1,19 +1,4 @@
-
-
-
-
 %\tnote{This is a message.}
-
-\minote{This is working..}
-\begin{lstlisting}[caption={A real code snippet taken from Stackoverflow. I want to build a tool which after analyzing the code snippet will highlight the part of the code that is insecure and suggest an alternative secure implementation as showed in the figure.}, label={fig:motivating-example}]
-    private byte[] encrypt(byte[] raw, byte[] clear) {
-      ...
-      _Cipher cipher = Cipher.getInstance("AES")_;}
-      // Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-      ....
-      return encrypted
-    }
-     \end{lstlisting}
    \label{into}
    %\textcolor{blue}{we can't also using testing to test the code snippet mention it somewhere...}
    %\note{Certainly elsewhere my do allowance at. The address farther six hearted hundred towards husband. Strangers ye to he sometimes propriety in. She right plate seven has. Bed who perceive judgment did marianne.}
@@ -35,4 +20,11 @@
    Fischer et al. has shown that developers have a tendency to directly copy paste code form Stack Overflow~\cite{fischer2017stack}. Therefore there are chances that any insecure code snippets posted on Stackoverflow can potentially find it way into production level code. To make matters worse, Meng et al.~\cite{meng2018secure} has showed that many accepted answers on Stackoverflow have seriously insecure code and often-times given by users having high reputation. This adds to the problem copy pasting vulnerable code from online platform and furthermore increases the chances of the insecure code snippet being trickled down to production level code. 
    Unfortunately there is not state-of-the-art tool to analyzie if a code posted by developer on Stackoverflow is secure or not. In absense of such tool, Stackoverflow is potentially contributing as a major source of vulnerability in production level code.  
    
-   A static tool which can identify which part of the code snippet is insecure and suggest secure alternatives can help stopping the flow of insecure code from Stackoverflow to production level code.   
+   A static tool which can identify which part of the code snippet is insecure and suggest secure alternatives can help stopping the flow of insecure code from Stackoverflow to production level code.
+
+   \minote{Talk about key challenges here. Say there are existing tools that can detect these rules on complete source codes.  But code snippets presents some unique challenges. such has
+   \begin{itemize}
+   \item code snippets are erronous
+   \item code snippets are incomplete  
+   \end{itemize}
+   }   

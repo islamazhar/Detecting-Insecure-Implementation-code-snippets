@@ -1,27 +1,94 @@
+
+In this section, we will discuss the pipeline we follow to detect insecure patterns in code snippets as shown in Figure~\ref{fig:pipeline}. We will first discuss about repairing the code snippets (section ~\ref{subsec:code-repair}), and then converting the repaired to code snippets to an Intermidiate representation (IR) to run analysis (section~\ref{subsec:converting-to-IR}). Lastly we will finish by describing the techniques we have applied on the converted IR to detect the insecure patterns (section~\ref{subsec:identifying-insecure-patterns}), which we have previously described in section~\ref{sec:insecure-patterns}.     
+\begin{figure*}[t]
+  \centering
+  \includegraphics*[width=\linewidth]{Figures/overall-process.png}
+  \caption{}
+  \label{fig:pipeline}
+\end{figure*}
+
+
 \subsection{Code Repair}
+\label{subsec:code-repair}
+% code snippets convey single intents
+While writing code snippets as answers to posted questions, developers tend to be concise and short. The reason being long code snippets has lower chance of being accepted and upvoted by others in online platforms such as Stack Overflow.\fixme{Give a statistic on the avg. length of the code snippets of the dataset} Within a few lines of code, developers try to convey the intent hinting at a working solution by asuuming everything other are in place to for sucessful compilation. However this very mindset of developers can leave syntatic errors, missing classes in the code snippets. As a result, converting these code snippets to IR for analysis becomes difficult.
+
+For identifying insecure patterns for which only keyword searching is sufficient (e.g., Rule 7, 8 as shown in Table~\ref{tab:keyword-searching}) this is not a problem since we don't need to convert them to any IR. However for idenitfying insecure pattern (e.g., Rule 1-6 as shown in Table~\ref{tab:slicing}) which requires running analysis this poses a problem. Therefore to identfy them, we need to add some repairs to the code snippets. For the purpose of this paper, we have applied the following repairs to the code snippets.
+
+\subsubsection{Syntatic repair}
+To remove the syntatic error present on the code snippets we do the following syntatic repairing.
+  \begin{itemize}
+    \item We remove illegal characters ( e.g., \&gt, \&lt, \&amp, etc). Many of these illegal characters appered as the dataset was crawled from Stackoverflow website's raw HTML and HTML sanitizes some characters which are used in the code snippets. Also some code snippets have comments without any comment sign, and dots to implify some code would be here which not relevent to question posted.    
+    \item Some code snippets do not have match brackets, and extra quotes for strings. 
+    \item Some code snippets have \texttt{@Overide} notation implying it is implementing an interface. However the partial program analysis tool we will discuss to convert code snipeets to IR, can not handle \texttt{@Override} notation.
+  \end{itemize}
+     
+
+\subsubsection{Missing class and method names:}
+Partial program analysis (PPA) tool which we have used to convert the code snippets to IR, can not consume a lines  of code missing classname, package name, method names. Therefore we applied the following repairs. 
 \begin{itemize}
-    \item Syntax error: illegal characters (\&gt;, \&lt;, \&amp;, ..., ""), match brackets, @Overide, 
-    \item  Missing class and method names: wrapped the code snippets inside a class, called methods without class, package names.
-    \item  importing common crpto classes. 
+\item If the code snippet is missing any class name, we wrap the code snippet inside a public class name. If the code snippet already has a public class, we rename the file according to that public class.
+\item If the code snippet does not have any package name, we place the public class in a package, and add the package name to the code snippet. If the code snippet has package name, we create proper directory strcuture according to the package name and place the code snippet there before converting them to IR. 
+\item We also add dummy implementation of missing methods as developers tend to have methods names  in code snippets but does not give any implementation within the code snippets.
+\item Finally, we load the some popular crypto classes in Java to the runtime of PPA tool which are imported, implemented by code snippets frequently. This helped us to avoid missing class name, unknown interface error thrown by PPA in many cases.  
+ 
 \end{itemize}
+       
 \subsection{Converting code snippets to IR}
+\label{subsec:converting-to-IR}
+After repairing the code snippets, we tried to convert them to IR grammer named Jimple. Jimple~\cite{vallee1998jimple} is a 3-address intermediate representation that has been designed to simplify analysis. Jimple was inspired from SIMPLE an AST to represent C statements. To convert the code snippets we used a tool named partial program analysis (PPA). Dagenais et al. developed PPA ~\cite{dagenais2008enabling} with goal of analyzing only subset of a program source code which matches with our use case of analysing code snippets. PPA  can infer types where types are not present that subset of the code. In case of failure PPA will place special type \texttt{"MAGICCLASS"}, \texttt{"MAGICCLASS"}, and \texttt{"MAGICMETHOD"}. This is necessary since without types it is not possible to build the abstract syntax tree, and eventually convert the code snippet to Jimple for a strongly typed language such as Java. As PPA can overcome this problem by inferring types of the objects used in the subset of the program source code, it can convert the subset program source code. We leverage PPA after making the code repairs presented in previous subsection~\ref{subsec:code-repair}. Otherwise a large number of code snippets was throwing errors as PPA can not handle errounos code snippets.     
+
+The idea is to feed the Jimple representation of the code snippet to Soot -- a state-of-the-art program analysis tool~\cite{soot}. Soot API can consume a Jimple representation, and perform data flow analysis which is discussed in the comming subsection~\ref{subsec:identifying-insecure-patterns}, required for detecting insecure patterns.
+\iffalse
+\minote{Talk about your choice of PPA}
 \begin{itemize}
     \item Have used PPA. 
     \item Talk about Jimple / AST.
 \end{itemize}
 \minote{Add a number on how many code snippets you have been able to convert here..}
-\subsection{Insecure Patterns}
-\minote{How did we come up with these insecure patterns? Say why this is not secure and show one line of example.}
+\fi
 
-\subsubsection{AES default encryption mode ECB }
-\subsubsection{Insecure cryptographic hash}
-\subsubsection{Presence of AllHostNameVerifier}
-\subsubsection{Abuse of X509TrustManager Verifier Interface}
-\subsubsection{Absence of performing hostname verification}
-\subsubsection{Weak key length}
-\subsubsection{Static/constant/predictable keys/IV }
-\subsubsection{Turning of CSRF protection }
-\subsubsection{Explicitly seeding random number.}
 \subsection{Identifying insecure patterns}
+\label{subsec:identifying-insecure-patterns}
 
+\begin{table}[ht]
+\scriptsize
+  \begin{tabular}{|l|l|}
+  \toprule
+  \begin{tabular}[c]{@{}l@{}}Rule\\ No\end{tabular} & keywords  \\ \midrule 
+  7                                                 &  \texttt{SSLSocketFactory.ALLOW\_ALL\_HOSTNAME\_VERIFIER} \\                                         
+  8                                                 &  \texttt{csrf.disable()}                             \\ 
+  \bottomrule
+  \end{tabular}
+  \caption{}
+  \label{tab:keyword-searching}
+\end{table}
+
+\begin{table}[ht]
+ %\resizebox{\linewidth}{!}{
+   \scriptsize
+  \begin{tabular}{|l|l|}
+  \toprule
+  \begin{tabular}[c]{@{}l@{}}Rule\\ No\end{tabular} & Slicing criteria       \\ \midrule 
+  1 &  \texttt{KeyGenerator.getInstance(*)} \\    \midrule                                       
+  2 &  \texttt{MessageDigest.getInstance(*);}      \\ \midrule 
+  3 & \texttt{public void checkClientTrusted} \\
+   & \texttt{public void checkServerTrusted} \\ 
+  & \texttt{public X509Certificate[] getAcceptedIssuers()} \\ \midrule
+  4 &  \texttt{keyPairGenerator.initialize(keySize);} \\ \midrule
+  5 & \texttt{public boolean verify} \\ \midrule 
+  6 &\texttt{new SecretKeySpec(keyBytes, "AES")} \\ 
+   & \texttt{*.load(*.openStream(), new String(keyBytes).toCharArray());} \\
+   &  \texttt{new PBEKeySpec(new String(keyBytes).toCharArray(),*);} \\
+  \bottomrule
+  \end{tabular}
+  \caption{}
+  \label{tab:slicing}
+ %}
+\end{table}
+
+\subsubsection{Key word base analysis}
+
+
+\subsubsection{Backword flow base analysis.}
 %\subsection{Synthesizing secure patterns}
