@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 /**
  * A strengthener that can be used to generate and re-seed random number
  * generators that do not seed themselves appropriately.

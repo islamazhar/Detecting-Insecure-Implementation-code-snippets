@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 /**
  * Adapter for bouncy castle crypto implementation (decryption).
  *

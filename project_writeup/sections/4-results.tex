@@ -1,3 +1,5 @@
+In this section, we will first describe our data-collection process. Next we will show the code repair, and detection accuracy techniques on a small subset of this collected dataset.   
+
 \subsection{Data collection} 
   We used dataset from two previous sources ~\cite{meng2018secure,fischer2017stack}. Both of these dataset contain code snippets posted on Stackoverflow. 
   Fisher et al. crawled 1,161 code snippets posted on Stackoverflow related to Andrioid Securuity ~\cite{fischer2017stack}. They considered a code snippet related to Android security if the code snippets makes API calls to
@@ -5,3 +7,22 @@
   
   Meng et al.  extracted 503 code snippets from 22,195 Stackoverflow posts by filtering the posts based on votes, duplications, and absence of code snipeets~\cite{meng2018secure}. In total our study is baded on the dataset by combining these two. Our dataset contains 1,664 code snippets. The timeline of these code snippets are from 2008-2017.
   \minote{add some more info and some statistics}
+
+  To make the analysis more clear, we try to categorize the code snippets into one of the 8 rules. This is achieved by manually inspecting randomly sampled 200 code snippets from 1.6K available code snippets. We assign the code snippets into one of the 8 insecure patterns, and record the common keywords appear in the code snippets. By doing this we have list of common keyword for each of the 8 insecure patterns. We can then categorize all 1.6K code snippets using these common keywords.
+  
+
+\subsection{Code repair} 
+%AES: 85/225 Broken-Hash: 69/219 
+% Constructor class
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{Figures/success_full_repair2.eps}
+\caption{The percentage of code snippets successfully parsed for each insecure pattern rules.}
+\label{fig:code-repair}
+\end{figure}
+
+We called a code snippet successfully repaired if we can convert it to a Jimple IR. Figure~\ref{fig:code-repair} illustrates the percentage of code snippets for each categorize, we have been able to parsed (i.e., convert to Jimple IR), using the code repair techniques discussed in subsection~\ref{subsec:code-repair}.  
+\subsection{Insecure pattern detection accuracy.}
+After converting each successfully repaired code snippets to Jimple IR, we can give the Jimple IR to our tool. Out tool is built on top of CryptoGurd which uses Soot as its program analysis enginee. Using Soot's \texttt{name of the API} API, we enable backword flow analysis given the slicing criteria. The idea is track the special method invokations parameter and.
+% Say you have done the  1,2,4,5, 7,8 correctely. How to present the results? 
+% say you haven trying to address the problem of empty method detection but have not been able to do so.    

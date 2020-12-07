@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_706 { 
 /* generate secretkey */
 PBEKeySpec keySpec=new PBEKeySpec(username.toCharArray(),salt.getBytes(),1000,256);

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_72 { 
     /* User types in their password: */
     String password = "password";

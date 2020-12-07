@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;

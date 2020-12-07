@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import java.security.SecureRandom;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;

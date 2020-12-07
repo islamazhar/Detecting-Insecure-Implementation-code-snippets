@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_2 { 
 public static SecretKey generateKey(char[] passphraseOrPin, byte[] salt) throws NoSuchAlgorithmException, InvalidKeySpecException {
 // Number of PBKDF2 hardening rounds to use. Larger values increase

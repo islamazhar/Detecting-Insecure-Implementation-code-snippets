@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_142 { 
 public static String hashKeyForDisk(String key) {
     String cacheKey;

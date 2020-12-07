@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_757 { 
 public String md5(String toConvert) {
 

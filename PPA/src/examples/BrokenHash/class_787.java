@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_787 { 
 try {
     PackageInfo info = getPackageManager().getPackageInfo(

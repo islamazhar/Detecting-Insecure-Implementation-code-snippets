@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1320 { 
     /**
      * Encrypts the data passed to it using Hmac-SHA1.

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1060 { 
     import java.security.AlgorithmParameters;
 import java.security.SecureRandom;

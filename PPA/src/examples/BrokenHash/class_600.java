@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_600 {
 public static String toASCII(byte b[], int start, int length) {
     StringBuffer asciiString = new StringBuffer();

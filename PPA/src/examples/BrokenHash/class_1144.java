@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1144 { 
 String stringThatNeedsToBeEncrpyted = "PutYourURL"; 
         MessageDigest mdEnc = null;

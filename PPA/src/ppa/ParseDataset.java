@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ParseDataset {
 
 	public static void main(String[] args) {
-		String out_folder = "/home/islamazhar/eclipse-workspace/PPA/src/examples/BrokenHash/";
+		String out_folder = "/home/islamazhar/eclipse-workspace/PPA/src/examples/hostNameVerifier/";
 		String in_file = "/home/islamazhar/eclipse-workspace/answer_snippets.annotations.csv";
 		ParseDataset parseDataset = new ParseDataset();
 		parseDataset.generate_code_snippets(in_file, out_folder);
@@ -24,7 +24,7 @@ public class ParseDataset {
 	 * 
 	 */
 	public String insert_package_name(String line) {
-		return "package examples.BrokenHash" + '\n' + line;
+		return "package examples.hostNameVerifier" + '\n' + line;
 	}
 	/*
 	 * 
@@ -71,8 +71,15 @@ public class ParseDataset {
 		int start = 0;
 		String class_name = "";
 		boolean flag = false;
-		String [] patterns = {"AES"};
-		//String [] patterns = {"MD5", "SHA1"};
+		//String [] patterns = {"AES"};
+		//String [] patterns = {"MD5", "SHA1", "MD2", "MD1"};
+		//String [] patterns = {"X509TrustManager"};
+		// String [] patterns = {"RSA", "ECC"};
+		// String [] patterns = {"keyBytes"};
+		// String [] patterns = {"ALLOW_ALL_HOSTNAME_VERIFIER"};
+		String [] patterns = {"public boolean verify"};
+		
+
 		boolean added_class_name = false;
 		try {
 			FileWriter array_index = new FileWriter("array_index.txt");
@@ -98,7 +105,7 @@ public class ParseDataset {
 					if (code.size() > 0 && flag) {
 						FileWriter file = new FileWriter(out_folder+class_name+".java");
 						// add the package name the code snippet do not have any package name..
-						file.write("package examples.AES; \n");
+						file.write("package examples.hostNameVerifier; \n");
 						
 						
 						if(!added_class_name) {

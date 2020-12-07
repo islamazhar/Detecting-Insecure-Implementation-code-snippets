@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_32 { 
 private final void processChallenge(XmlPullParser parser, Writer writer,
         String sessionKey, String sessionSecret) throws IOException,

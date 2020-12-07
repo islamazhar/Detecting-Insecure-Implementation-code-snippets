@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_409 { 
     String getMD5(String data){
         MessageDigest m = MessageDigest.getInstance("MD5");

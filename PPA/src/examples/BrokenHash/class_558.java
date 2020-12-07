@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_558 { 
 public static final String md5(final String s) {
 try {

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import java.security.GeneralSecurityException;
 import java.security.InvalidKeyException;
 import java.security.Key;

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_891 { 
 SecretKeyFactory f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
 // note, the third argument should be set to a value as high as possible

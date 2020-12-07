@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import java.nio.charset.Charset;
 import java.security.AlgorithmParameters;
 import java.security.SecureRandom;

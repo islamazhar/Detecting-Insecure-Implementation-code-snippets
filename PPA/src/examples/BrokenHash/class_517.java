@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_517 { 
 MessageDigest md = MessageDigest.getInstance("SHA1");
 InputStream in = new FileInputStream("hereyourinputfilename");

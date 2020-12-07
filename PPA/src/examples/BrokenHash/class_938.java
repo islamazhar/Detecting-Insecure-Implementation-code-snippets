@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_938 { 
 public boolean Verify(RSAPublicKey key, String signature, String data)
 {

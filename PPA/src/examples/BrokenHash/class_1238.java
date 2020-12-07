@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 //     package au.gov.dhsJobSeeker.main.readwriteprefssettings.util;
 
     import java.security.SecureRandom;

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_566 { 
 PublicKey publicKey = KeyFactory.getInstance("RSA").generatePublic(publicKeySpec);
 Signature sign = Signature.getInstance("SHA1withRSA");

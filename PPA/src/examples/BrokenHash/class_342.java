@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_342 { 
 private byte[] key = { (byte) 141, 75, 21, 92, (byte) 201, (byte) 255,
         (byte) 129, (byte) 229, (byte) 203, (byte) 246, (byte) 250, 120,

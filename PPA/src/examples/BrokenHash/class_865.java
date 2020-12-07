@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_865 { 
     public void computeSHAHash(String path)// path to your file
     {

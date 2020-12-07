@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_240 { 
     PackageInfo packageInfo = null;
     try {

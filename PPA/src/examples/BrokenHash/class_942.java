@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import android.security.MessageDigest;
 
 public class class_942 {

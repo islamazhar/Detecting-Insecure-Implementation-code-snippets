@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 /**
  * Warning, this gives a false sense of security.  If an attacker has enough access to
  * acquire your password store, then he almost certainly has enough access to acquire your

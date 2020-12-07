@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1113 { 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

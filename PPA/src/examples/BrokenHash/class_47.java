@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 class User {
     @DatabaseField(canBeNull = false)
     private String passwordHash;

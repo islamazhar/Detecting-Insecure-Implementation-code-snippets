@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
    public class class_1244 {
 
     private static final String TRANSFORMATION = "AES/CFB8/NoPadding";

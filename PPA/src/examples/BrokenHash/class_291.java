@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_291 { 
 public static byte[] encrypt(String passphrase, byte[] data) throws Exception {
 

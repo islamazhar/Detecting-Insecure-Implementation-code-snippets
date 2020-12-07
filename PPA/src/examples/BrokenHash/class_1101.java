@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1101
 public static String encrypt(String seed, String cleartext) throws Exception
 {

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_645 { 
 private static String hmacSha1(String value, String key)
             throws UnsupportedEncodingException, NoSuchAlgorithmException,

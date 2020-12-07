@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_105 { 
  static final String ENABLED_CIPHERS[] = {
     "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",

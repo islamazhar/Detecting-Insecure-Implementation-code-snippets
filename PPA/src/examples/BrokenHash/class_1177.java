@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import com.example.Device;
 
 import org.spongycastle.bcpg.ArmoredInputStream;

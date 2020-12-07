@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import java.security.SecureRandom;
 import java.security.Security;
 

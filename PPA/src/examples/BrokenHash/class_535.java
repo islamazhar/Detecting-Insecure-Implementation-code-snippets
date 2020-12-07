@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 @EBean(scope = Scope.Singleton)
 public class class_535 implements ClientHttpRequestInterceptor {
 

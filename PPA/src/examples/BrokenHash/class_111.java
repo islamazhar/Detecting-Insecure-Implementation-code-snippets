@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public final class class_111 {
 public static final byte CONNECTION_OFFLINE = 1;
 public static final byte CONNECTION_WIFI = 2;

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_780 { 
     SecretKeySpec sks = null;
     try {

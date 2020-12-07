@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_196 { 
 private void genKey() {
         // TODO Auto-generated method stub

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1175 { 
 public byte[] getMD5(String fileAContents) throws NoSuchAlgorithmException {
      MessageDigest messageDigest = MessageDigest.getInstance("MD5");

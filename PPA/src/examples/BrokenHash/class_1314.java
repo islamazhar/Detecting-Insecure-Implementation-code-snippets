@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1314 { 
 public static String getHmac(String entity, String salt) throws Exception{
     Mac mac = Mac.getInstance("HmacSHA256");

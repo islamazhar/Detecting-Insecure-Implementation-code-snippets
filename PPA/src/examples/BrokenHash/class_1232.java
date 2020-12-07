@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException; 
 import java.net.URLEncoder; 

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_803 { 
 public static String getMD5EncryptedString(String encTarget){
         MessageDigest mdEnc = null;

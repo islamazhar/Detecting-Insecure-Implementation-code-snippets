@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_232 
 {
     private static final String CIPHER_ALGORITHM = "AES";

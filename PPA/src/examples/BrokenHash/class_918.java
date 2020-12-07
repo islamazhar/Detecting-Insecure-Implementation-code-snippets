@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_918 { 
 public String calculateMD5(String string) {
     StringBuilder result = new StringBuilder();

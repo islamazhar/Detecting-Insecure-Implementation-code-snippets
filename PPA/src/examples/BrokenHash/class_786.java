@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 // package com.neocodenetworks.smsfwd;
 
 import java.security.*;

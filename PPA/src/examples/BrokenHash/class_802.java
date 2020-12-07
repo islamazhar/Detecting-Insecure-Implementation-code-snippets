@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_802 { 
     MessageDigest dig = MessageDigest.getInstance("MD5");
     DigestInputStream stream = new DigestInputStream(new FileInputStream(new File("/path/to/file")),dig);

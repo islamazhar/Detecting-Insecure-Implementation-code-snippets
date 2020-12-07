@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_480 { 
 SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
     sr.setSeed(seed);

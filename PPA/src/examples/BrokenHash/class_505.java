@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_505 { 
 private String getCertificateSHA1Fingerprint() {
     PackageManager pm = mContext.getPackageManager();

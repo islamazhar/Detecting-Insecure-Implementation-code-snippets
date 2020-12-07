@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_670 { 
 private String getMD5(String file){
     String md5 = ";

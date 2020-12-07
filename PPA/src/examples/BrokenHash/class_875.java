@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_875 { 
  public String makeSHA1Hash(String input)
         throws NoSuchAlgorithmException, UnsupportedEncodingException

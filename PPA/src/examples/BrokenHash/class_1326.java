@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1326 { 
 /**
  * Perform MD-5 hash on the given string.

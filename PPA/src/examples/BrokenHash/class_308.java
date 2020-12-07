@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_308 { 
 private static PKCS10CertificationRequest generateCSRFile(KeyPair keyPair) throws IOException, OperatorCreationException {
     String principal = "CN=company1, OU=company1, O=company1, C=GB";

@@ -45,7 +45,7 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 	private final static String SRC_CLASSPATH = "/home/islamazhar/eclipse-workspace/PPA/src/";
 	
 	//private final static String CLASS_TO_ANALYZE = "ppa.HelloThread";
-	private final static String CLASS_TO_ANALYZE = "examples.AES.class_";
+	private final static String CLASS_TO_ANALYZE = "examples.hostNameVerifier.class_";
 	
 	private final static String OUTPUT_DIR = "examples/output";
 	
@@ -63,14 +63,15 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 			BufferedReader br = new BufferedReader(new FileReader(in_file)); 
 			while ((line = br.readLine()) != null) {
 				try {
+					count ++;
 					soot.G.reset();
 					class_to_analyze = CLASS_TO_ANALYZE + Integer.parseInt(line);
 					convert_to_jimple(class_to_analyze);
-					System.out.println(class_to_analyze);
-					count ++;
+					//System.out.println(class_to_analyze);
+					
 				}catch(Exception ex) {
 					count --;
-					//System.out.println("Can not process class_"+ class_to_analyze);
+					System.out.println("Can not process class_"+ class_to_analyze);
 				}
 			}
 		}catch(Exception ex){
@@ -133,7 +134,7 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 		    while(it.hasNext()){
 		    	Unit stmt = it.next();
 		    	//System.out.println(it.next().getClass());
-		    	System.out.println(stmt.toString());
+		    	//System.out.println(stmt.toString());
 		    	//System.out.println(stmt.getClass());
 		    	//if (stmt instanceof JAssignStmt) {
 		    	//	JAssignStmt jAssignStmt = (JAssignStmt) stmt;

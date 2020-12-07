@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1097 { 
 protected static String getMD5(String inputText)
 {

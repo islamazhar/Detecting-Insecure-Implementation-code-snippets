@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="AES"/>
+		<item key="selection" value="MD5"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="MD5"/>
+			<item value="insert_package_name"/>
+			<item value="patter"/>
 			<item value="AES"/>
 			<item value="26"/>
 			<item value="================"/>
@@ -20,9 +23,6 @@
 			<item value="CIPHER_ALGORITHM"/>
 			<item value="AES/CBC/PKCS5Padding"/>
 			<item value="ALLOW_ALL_HOSTNAME_VERIFIER"/>
-			<item value="getAccept"/>
-			<item value="tm"/>
-			<item value="getSocketFactory"/>
 		</list>
 		<list key="replacehistory">
 			<item value="class_167"/>

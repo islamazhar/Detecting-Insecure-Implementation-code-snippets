@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_730 { 
 private static char[] hexDigits = "0123456789abcdef".toCharArray();
 

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_967 { 
 KeyGenerator keygen = KeyGenerator.getInstance("AES");
 SecureRandom secrand = SecureRandom.getInstance("SHA1PRNG");

@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1275 { 
 private final static String algorithm = "PBKDF2WithHmacSHA1";
 

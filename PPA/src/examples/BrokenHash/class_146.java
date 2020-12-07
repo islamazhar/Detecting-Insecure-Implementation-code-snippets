@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_146 { 
 Signature Signer = Signature.getInstance("SHA1withRSA");
 Signer.initSign(MyKey, new SecureRandom()); //Where do you get the key?

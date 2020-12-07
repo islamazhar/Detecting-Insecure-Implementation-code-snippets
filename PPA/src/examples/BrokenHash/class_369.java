@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_369 { 
 MessageDigest digester = MessageDigest.getInstance("MD5");
 byte[] bytes = new byte[8192];

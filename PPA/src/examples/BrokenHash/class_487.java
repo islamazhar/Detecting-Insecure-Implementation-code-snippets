@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_487 { 
 byte[] decoded = BASE64DecoderStream.decode(KEY.getBytes());
 KeyFactory keyFactory = KeyFactory.getInstance("RSA");

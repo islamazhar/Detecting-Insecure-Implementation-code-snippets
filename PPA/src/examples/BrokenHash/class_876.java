@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_876 { 
     int iterationCount = 1000;
     int saltLength = 8; // bytes; 64 bits

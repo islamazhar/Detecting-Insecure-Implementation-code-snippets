@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_711 { 
 public static String encrypt(final String plainMessage,
         final String symKeyHex) {

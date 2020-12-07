@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_115 { 
  /**
    * Generates SHA-1 digest of the provided data.

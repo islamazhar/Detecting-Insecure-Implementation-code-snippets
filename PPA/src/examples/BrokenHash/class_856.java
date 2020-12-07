@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_856 { 
 public static byte[] generateKey(String password) throws Exception
 {

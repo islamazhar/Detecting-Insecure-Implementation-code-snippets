@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 // package me.gilo.a55thavenue.data;
 
 import android.util.Base64;

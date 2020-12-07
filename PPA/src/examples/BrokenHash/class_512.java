@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_512 { 
 public static String md5(String s) {
     MessageDigest digest;

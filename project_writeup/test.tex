@@ -1,0 +1,49 @@
+% This file was created by tikzplotlib v0.9.4.
+\begin{tikzpicture}
+
+\begin{axis}[
+axis background/.style={fill=white!89.8039215686275!black},
+axis line style={white},
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=white!80!black, fill=white!89.8039215686275!black},
+tick align=outside,
+tick pos=left,
+title={Percentage of code snippets repaired successfully},
+x grid style={white},
+xlabel={Rule #},
+xmajorgrids,
+xmin=-0.79, xmax=7.79,
+xtick style={color=white!33.3333333333333!black},
+xtick={0,1,2,3,4,5,6,7},
+xticklabels={1,2,3,4,5,6,7,8},
+y grid style={white},
+ylabel={# of code snippets},
+ymajorgrids,
+ymin=0, ymax=236.25,
+ytick style={color=white!33.3333333333333!black}
+]
+\draw[draw=none,fill=red,very thin] (axis cs:-0.4,85) rectangle (axis cs:0.4,225);
+\addlegendimage{ybar,ybar legend,draw=none,fill=red,very thin};
+\addlegendentry{Failure}
+
+\draw[draw=none,fill=red,very thin] (axis cs:0.6,38) rectangle (axis cs:1.4,173);
+\draw[draw=none,fill=red,very thin] (axis cs:1.6,69) rectangle (axis cs:2.4,219);
+\draw[draw=none,fill=red,very thin] (axis cs:2.6,19) rectangle (axis cs:3.4,75);
+\draw[draw=none,fill=red,very thin] (axis cs:3.6,24) rectangle (axis cs:4.4,90);
+\draw[draw=none,fill=red,very thin] (axis cs:4.6,12) rectangle (axis cs:5.4,40);
+\draw[draw=none,fill=red,very thin] (axis cs:5.6,24) rectangle (axis cs:6.4,68);
+\draw[draw=none,fill=red,very thin] (axis cs:6.6,10) rectangle (axis cs:7.4,40);
+\draw[draw=none,fill=green!50.1960784313725!black,very thin] (axis cs:-0.4,0) rectangle (axis cs:0.4,85);
+\addlegendimage{ybar,ybar legend,draw=none,fill=green!50.1960784313725!black,very thin};
+\addlegendentry{Success}
+
+\draw[draw=none,fill=green!50.1960784313725!black,very thin] (axis cs:0.6,0) rectangle (axis cs:1.4,38);
+\draw[draw=none,fill=green!50.1960784313725!black,very thin] (axis cs:1.6,0) rectangle (axis cs:2.4,69);
+\draw[draw=none,fill=green!50.1960784313725!black,very thin] (axis cs:2.6,0) rectangle (axis cs:3.4,19);
+\draw[draw=none,fill=green!50.1960784313725!black,very thin] (axis cs:3.6,0) rectangle (axis cs:4.4,24);
+\draw[draw=none,fill=green!50.1960784313725!black,very thin] (axis cs:4.6,0) rectangle (axis cs:5.4,12);
+\draw[draw=none,fill=green!50.1960784313725!black,very thin] (axis cs:5.6,0) rectangle (axis cs:6.4,24);
+\draw[draw=none,fill=green!50.1960784313725!black,very thin] (axis cs:6.6,0) rectangle (axis cs:7.4,10);
+\end{axis}
+
+\end{tikzpicture}

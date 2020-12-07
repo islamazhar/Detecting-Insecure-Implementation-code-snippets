@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_747 { 
 public static String decrypt(String seed, String encrypted) throws Exception {
   byte[] keyb = seed.getBytes("UTF-8");

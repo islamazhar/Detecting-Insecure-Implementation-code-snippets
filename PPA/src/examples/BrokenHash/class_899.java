@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 // package nl.owlstead.stackoverflow;
 
 import java.io.IOException;

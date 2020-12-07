@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;

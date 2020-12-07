@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 // package blabla.fileencrypter;
 
 import lots;

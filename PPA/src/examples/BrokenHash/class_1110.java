@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1110 { 
 public static String encrypt(String seed, String cleartext) throws Exception {
 Â  Â  Â  Â  Â  Â  Â  Â byte[] rawKey = getRawKey(seed.getBytes("UTF-16"));

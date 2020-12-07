@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_403 { 
     public static String getMD5Hash(String s) throws NoSuchAlgorithmException {
 

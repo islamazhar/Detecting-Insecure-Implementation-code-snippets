@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1139 { 
  private static byte[] getRawKey(byte[] seed) throws Exception {
     KeyGenerator kgen = KeyGenerator.getInstance("AES");

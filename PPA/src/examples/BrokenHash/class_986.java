@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 // package com.citc.testencryption;
 
 import java.security.NoSuchAlgorithmException;

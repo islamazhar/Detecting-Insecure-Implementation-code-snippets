@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1104 { 
 TelephonyManager TelephonyMgr = (TelephonyManager)getSystemService(TELEPHONY_SERVICE);
 String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE

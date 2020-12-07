@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1279 { 
 public byte[] passwordToHash(String password) {
     if (password == null) {

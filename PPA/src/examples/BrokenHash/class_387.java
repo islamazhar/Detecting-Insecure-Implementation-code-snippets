@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_387 { 
 public static String convertPassMd5(String pass) {
         String password = null;

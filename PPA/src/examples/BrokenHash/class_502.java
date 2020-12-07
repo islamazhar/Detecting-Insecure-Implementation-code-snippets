@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_502 { 
 private boolean checkAuthorized() throws SecurityException {
     PackageManager pm = getPackageManager();

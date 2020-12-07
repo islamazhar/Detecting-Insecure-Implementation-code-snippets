@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_734 {
 
 public static final String KEY_DERIVATION_ALGORITHM = "PBKDF2WithHmacSHA1";

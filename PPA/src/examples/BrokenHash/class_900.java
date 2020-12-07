@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 // package com.test;
 
 import java.io.IOException;

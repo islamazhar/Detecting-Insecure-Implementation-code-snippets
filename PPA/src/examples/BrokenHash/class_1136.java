@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_1136 { 
 Mac mac = Mac.getInstance("HmacSHA1");
 SecretKeySpec secret = new SecretKeySpec(key.getBytes(), mac.getAlgorithm());

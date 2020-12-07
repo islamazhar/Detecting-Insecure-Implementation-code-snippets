@@ -1,4 +1,4 @@
-package examples.AES; 
+package examples.BrokenHash; 
 public class class_374 { 
 import sun.misc.BASE64Encoder;
 import javax.crypto.Mac;
