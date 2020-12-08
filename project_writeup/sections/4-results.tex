@@ -23,6 +23,6 @@ In this section, we will first describe our data-collection process. Next we wil
 
 We called a code snippet successfully repaired if we can convert it to a Jimple IR. Figure~\ref{fig:code-repair} illustrates the percentage of code snippets for each categorize, we have been able to parsed (i.e., convert to Jimple IR), using the code repair techniques discussed in subsection~\ref{subsec:code-repair}.  
 \subsection{Insecure pattern detection accuracy.}
-After converting each successfully repaired code snippets to Jimple IR, we can give the Jimple IR to our tool. Out tool is built on top of CryptoGurd which uses Soot as its program analysis enginee. Using Soot's \texttt{name of the API} API, we enable backword flow analysis given the slicing criteria. The idea is track the special method invokations parameter and.
+After converting each successfully repaired code snippets to Jimple IR, we can give the Jimple IR to our tool. Out tool is built on top of CryptoGurd which uses Soot as its program analysis enginee. Using Soot's \texttt{JimpleAST} API~\footnote{\url{https://www.sable.mcgill.ca/soot/doc/soot/jimple/parser/JimpleAST.html}}, we enable backword flow analysis given the slicing criteria. The idea is track the special method invokations parameter and.
 % Say you have done the  1,2,4,5, 7,8 correctely. How to present the results? 
 % say you haven trying to address the problem of empty method detection but have not been able to do so.    
