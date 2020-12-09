@@ -17,6 +17,20 @@ Stack Overflow treats source code snippets as plain
 text and searches surface snippets as they would any other text
 <!-- Hence can not detect if vulnerable patterns are there or not -->
 
+
+## conclusions
+In this paper we have explored source code snippets given
+in response to Stack Overflow questions. Specifically, we have
+explored the space of code snippets that utilize the Android
+API from accepted solutions. We believe that by focusing
+on accepted solutions we are more likely to identify ‘best
+practice’ API usage. We have developed an approach that
+can parse these short code snippets to effectively identify
+API usage. We found that Android-tagged Stack Overflow
+snippets contain on average 9 type references and 4 method
+calls that could be utilized to improve code search and link
+documentation with developer queries.
+
 # Secure Coding Practices in Java: Challenges and Vulnerabilities
 
 Developers have pragmatic goals (i.e., getting the code to run)
@@ -32,6 +46,18 @@ tion scores, votes, and accept labels) on the StackOverflow forum.
 We also found one instance of cyberbullying, where condescending
 comments were directed at a security-conscious user [103].
 
+## conclusions:
+ - insecure-but-easy fixes
+ - These insecure coding practices, if used in production code, will seriously compromise the security of software products.
+ - Interestingly, we found that the social dynamics among
+askers and responders may impact people’s security choices.
+Highly viewed posts may wrongly promote vulnerable code.
+Metadata like accepted answers, responders’ reputation scores,
+and answers’ positive vote counts can further mislead devel-
+opers to take insecure advices. We also found an instance
+where cyberbullying comments were directed at a person
+who pointed out the danger of trusting all certificates.
+- Our future work is on building automatic or semi-automatic security bug detection and repair tools.
 # Stack Overflow Considered Harmful? The Impact of Copy&Paste on Android Application Security
 programming discussion platforms such as
 Stack Overflow serve as a rich source of information for software

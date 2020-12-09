@@ -1,6 +1,11 @@
-- Intro
+- Intro (done)
 - Conclusions
+- Fig 1 (can use of something like Na Meng's paper?)
 - Fig 2
 - FIg 5
 - Appendix code snippets
+- results section
+- limitations section add that repair techniques are not very successful.
+- You can use highlight boxes
+- what about THREATS TO VALIDITY?
 
