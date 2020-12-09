@@ -3,8 +3,10 @@
 In this section, we will discuss the pipeline we follow to detect insecure patterns in code snippets as shown in Figure~\ref{fig:pipeline}. We will first discuss about repairing the code snippets (section ~\ref{subsec:code-repair}), and then converting the repaired to code snippets to an Intermidiate representation (IR) to run analysis (section~\ref{subsec:converting-to-IR}). Lastly we will finish by describing the techniques we have applied on the converted IR to detect the insecure patterns (section~\ref{subsec:identifying-insecure-patterns}), which we have previously described in section~\ref{sec:insecure-patterns}.     
 \begin{figure*}[t]
   \centering
-  \includegraphics*[width=\linewidth]{Figures/overall-process.png}
-  \caption{}
+  \includegraphics*[width=0.8\linewidth]{Figures/overall-process.png}
+  \caption{Overall processing pipleline of insecure pattern detection (1) collecting 1.6K code snippets from Stack Overflow, 
+  (2) applying code repairs on collected code snippets, (3) converting code snippets to Jimple 3-address intermidate representation,
+  (4) detecting 8 insecure most insecure patterns using keyword searching and backword flow analyis.}
   \label{fig:pipeline}
 \end{figure*}
 

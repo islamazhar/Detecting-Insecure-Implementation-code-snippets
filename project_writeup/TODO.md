@@ -1,10 +1,15 @@
 - Intro (done)
-- Conclusions
-- Fig 1 (can use of something like Na Meng's paper?)
-- Fig 2
+- Conclusions (done)
+- Fig 1 (done)
+- Fig 2 (done)
 - FIg 5
+- Figure 3
+- Table 1
+- Table 2
+- Table 3
+- Table 4
 - Appendix code snippets
-- results section
+- results section (done it next)
 - limitations section add that repair techniques are not very successful.
 - You can use highlight boxes
 - what about THREATS TO VALIDITY?
