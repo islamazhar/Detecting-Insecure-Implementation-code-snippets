@@ -18,7 +18,7 @@ For identifying insecure patterns for which only keyword searching is sufficient
 \subsubsection{Syntatic repair}
 To remove the syntatic error present on the code snippets we do the following syntatic repairing.
   \begin{itemize}
-    \item We remove illegal characters ( e.g., \&gt, \&lt, \&amp, etc). Many of these illegal characters appered as the dataset was crawled from Stackoverflow website's raw HTML and HTML sanitizes some characters which are used in the code snippets. Also some code snippets have comments without any comment sign, and dots to implify some code would be here which not relevent to question posted.    
+    \item We remove illegal characters ( e.g., ``\&gt;'', ``\&lt;'', ``\&amp;'', ``\&quot;'' ``\&\#x27'', etc). Many of these illegal characters appered as the dataset was crawled from Stackoverflow website's raw HTML and HTML sanitizes some characters which are used in the code snippets. Also some code snippets have comments without any comment sign, and dots to implify some code would be here which not relevent to question posted.    
     \item Some code snippets do not have match brackets, and extra quotes for strings. 
     \item Some code snippets have \texttt{@Overide} notation implying it is implementing an interface. However the partial program analysis tool we will discuss to convert code snipeets to IR, can not handle \texttt{@Override} notation.
   \end{itemize}
@@ -98,13 +98,41 @@ Therefore, according to our manual observation, we can detect only two insecure 
 \subsubsection{Backword flow base analysis.}
 We use the backword flow analysis intrdocued by Rahaman et al.~\cite{cryptogurd} in their CryptoGurd Project. They introduced specialize def-use analysis~\cite{use-def} based on program slicing techniques~\cite{program-slicing} to detect 16 common cryptographic API misuses in Apache, and Android projects. Def-use  dataflow analysis builds a dependency relation based on the definition and use statements. Given a slicing criteria, which is a statement, or a parameters of an API, backword flow analysis computes the set of program statements that affects the slicing criteria in terms of data flow. The key design choice, hence, here is to specify special function invokation places as the slicing crteria. The slicing criteria used for paper are highlighted in Table~\ref{tab:slicing}. 
 
-Now we will detail why simple keyword based analysis is not sufficient for detecting rules 1-6 as they can introduce FP even for simple rules. To demonstrate this, consider the example code snippet shown in listing~\ref{} for rule 2 -- detecting insecure broken cryptographic hashes MD5, MD4, MD2, SHA1. We can use keyword searching based on  the name of broken hashes, and successsfully detect. However it will introduce FP for the code snippets shown in listing~\ref{}. % show a listing where MD5 is mentioned as commment, and overwritten as variable.
+Now we will detail why simple keyword based analysis is not sufficient for detecting rules 1-6 as they can introduce FP even for simple rules. To demonstrate this, consider the example code snippet shown in listing~\ref{fig:aes-without-vars} corresponding to insecure pattern rule 2 -- detecting insecure broken cryptographic hashes MD5, MD4, MD2, SHA1. We can use keyword searching based technique on the name of broken hashes, and successsfully detect that the insecure pattern that code snippet in listing~\ref{fig:aes-without-vars} have used broken hash. However it will introduce Fasle positive for same insecure pattern on the code snippets shown in listing~\ref{fig:aes-without-vars}.% show a listing where MD5 is mentioned as commment, and overwritten as variable.
 As there are multiple ways developers can use these broken hashes, unlike rule 7-8, we set \texttt{MessageDigest.getInstance(*);} as the slicing criteria. Then we start backword def-use analysis to see if any of the program sets affects the paramters of \texttt{MessageDigest.getInstance(*);}, and has a value of equal to name of the broken hash.
+
+
+\begin{lstlisting}[caption={A code snippet where keyword based detection work well}, label={fig:aes-without-vars}]
+    ...
+    MessageDigest md = MessageDigest.getInstance("MD5");
+    md.update(str.getBytes());
+    ....
+\end{lstlisting}
+
+\begin{lstlisting}[caption={A code snippet where keyword based detection introduces FP}, label={fig:aes-with-vars}]
+    ...
+    int flag = 2;
+    MessageDigest md = MessageDigest.getInstance("MD5");
+    if(choice > 1){
+       md = MessageDigest.getInstance("SHA-256");
+    }
+    md.update(str.getBytes());
+    ....
+\end{lstlisting}
 
 \minote{A formal proof is given in the Appendix.}
 
 We modified the code base of  as CryptoGuard\footnote{\url{https://github.com/CryptoGuardOSS/cryptoguard}} to achieve our analysis on code snippets. This is for two reasons. Firstly, CryptoGuard already has the basic skelection for use-def analysis, and we just have to change the slicing criteria. Secondly, CryptoGurd uses Soot as the underlying program analysis enginee. Hence we can provide our generated Jimple IR using the PPA tool to CryptoGuard, and   CryptoGurd's program analysis enginee Soot can do backword analysis based on the slicing criteria defined by us.
 
+Figure~\ref{fig:slicing} shows one such example. Taking \texttt{SecretKeySpec} as the slicing criteria, we identify the set of statements which affects the first parameter of \texttt{SecretKeySpec} -- which is \texttt{MyDifficultPassw} here. Eventurally we will backtrack to the definition program set and can reason that it is randomly generated - rather a hard coded  secret. Since this makes the \texttt{SecretKeySpec} class object \texttt{sks} predictable, we have detected the presence of insecure pattern 6.
+
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{Figures/bckfwanalysis.eps}
+\caption{}
+\label{fig:slicing}
+\end{figure}
+
+%\minote{Here give one example explaining how you have choosen the slicing criteria, and the backword flow analysis. Then say example codes for other rules are given in the appendix}
 %The backword flow analysis starts a def-use analysis from the specified special function invokation place.    
 % Talk why keyword based analysis can find FP. Also it would be better to show one code snippet in the start and refer it throughout the paper.
 % Wrtie the lemma here that why FP will introduce no FP if the FP is with the the same procedure.

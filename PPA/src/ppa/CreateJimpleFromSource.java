@@ -45,7 +45,7 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 	private final static String SRC_CLASSPATH = "/home/islamazhar/eclipse-workspace/PPA/src/";
 	
 	//private final static String CLASS_TO_ANALYZE = "ppa.HelloThread";
-	private final static String CLASS_TO_ANALYZE = "examples.hostNameVerifier.class_";
+	private final static String CLASS_TO_ANALYZE = "examples.AES.class_";
 	
 	private final static String OUTPUT_DIR = "examples/output";
 	

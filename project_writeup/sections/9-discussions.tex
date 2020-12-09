@@ -1,4 +1,26 @@
 
+\section{Discussions on ML based detection techniques}
+%\subsection{ML based detection techniques.} 
+Identification of insecure patterns, vulnerabilities, and code-smells using ML based 
+techniques have been gaining tractions recently. This is mainly for two reasons 
+i) leveraging the wealth of open source code available ii) adaptive neural network models 
+which can capture/represent the complex patterns of source code. While givng a overview of ongoing  research in this area is outside
+the scope of the paper, we can mention some work exicting research work closely related to ours that uses ML techniques. 
+For example, Zhou et al. proposed~\cite{devign_neurips19} vulnerability detection model ``Devign'' for code snippets in C language. Their key idea to detect vulnerability is by capturing the abstract syntax tree structure of the source code via Gated-Graph Neural Network (GGNN).
+The study in~\cite{Automated-Vulnerability-Detection-in-Source-Code-Using-Deep-Representation-Learning} proposed automated vulnerability detection tools using deep feature representation learning. 
+%Interesting the study in~\cite{} hinted at detecting the issue of subjectivity the machine learning models suffers for detectin code smells by replicating the work in~\cite{}.
+
+One problem associated with using machine learning models is that either they are function level detection model~\cite{Automated-Vulnerability-Detection-in-Source-Code-Using-Deep-Representation-Learning}, do have limited abilitity 
+to reason why source code is vulnerable~\cite{devign_neurips19}, or suffers from subjectivity~\cite{are-we-there-yet}.
+
+
+Static analysis based approaches such as ours, can overcome for two reasons i) it can reason about the source code, and ii) as insecure patterns are repetitive. As a result we can build a static analysis tool by observing 
+the common insecure trends to reason about the  source. 
+We agree this can be an overstreaed claim, and leave it as a future work this paper.  
+%\paragraph{Sythesis}
+
+
+\iffalse
 \subsection{ML based detection techniques}
 \subsection{Code Repair}
 \subsection{Limitations for failing to construct a CFG:} program repair are basically simple edits
@@ -11,3 +33,4 @@ Other Sources of vulnerability:
 Lack of training /Knowledge: Vulnerable Online Turorials 
 Lack of screening tools:
 Being short and focusing on a working solution while writing code snippets.
+\fi

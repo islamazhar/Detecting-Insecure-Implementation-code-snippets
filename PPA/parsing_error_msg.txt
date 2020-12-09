@@ -1,0 +1,7 @@
+class_61.java:40: Syntax error: unexpected operator (.
+class_71.java:6: Syntax error: unexpected try.
+class_75.java:5: Method getSecretKeySpec not found.
+class_93.java:9: Syntax error: unexpected if.
+class_97.java:102: Unclosed string literal
+class_97.java:103: Syntax error: unexpected identifier "result".
+class_105.java:96: Syntax error: unexpected operator }.
