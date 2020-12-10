@@ -1,13 +1,13 @@
 \section{Limitations}
 \label{sec:limitations}
-\paragraph{Limitations from conservative datasets.} We only considered a small subset of code snippets in Java available on Stackoverflow. 
+\subsection{Limitations from conservative datasets.} We only considered a small subset of code snippets in Java available on Stackoverflow. 
 As a result the 8 insecure patterns we have considered are tailored to this small subset of code snippets. 
 A more rich dataset would have allowed to capture more naunce insecure patterns.Moreover, we only analzed code snippets with Java/Andrioid tags.
 If we have analyzed code snippets from other popular languages~\cite{stackoverflow-survey}, we would have been able to
 discover more insecure patterns.   
 
 
-\paragraph{Limitations from program repair techniques.} The program repair techniques in section~\ref{subsec:code-repair}, we have applied on erronous code snippets, 
+\subsection{Limitations from program repair techniques.} The program repair techniques in section~\ref{subsec:code-repair}, we have applied on erronous code snippets, 
 before converting them to Jimple IR, are simple semi-automated simple parsing  repairs. It would have been better to see if state-of-the-art  
 the program repair techniques can be adjusted to repair them. Especially automated program repair tools which can apply quick single edit fixes (e.g, Google's OSS-Fuzz and Microsoft's Springfield project) are quite enticing to apply for fixing erronous code snippets as discussed in this great survey paper~\cite{automated-program-repair}.
 
@@ -15,7 +15,7 @@ the program repair techniques can be adjusted to repair them. Especially automat
 
 \noindent
 \label{limitatons:jimple} 
-\paragraph{Limitations due to PPA/Jimple grammer.} The partial program analysis tool (PPA)~\cite{dagenais2008enabling} we have used theto run 
+\subsection{Limitations due to PPA/Jimple grammer.} The partial program analysis tool (PPA)~\cite{dagenais2008enabling} we have used theto run 
 analysis depends on Jimple.
 Jimple, a 3-address IR, was designed to handle, and simplify several
 difficulties while performing optimizations on the stack-based Java bytecode directly~\cite{vallee1998jimple}. However, 
@@ -26,7 +26,7 @@ Jimple inability to express annonymous classes, we can not detect the insecure p
 %The 
 
 \noindent
-\paragraph{Limitations from disregarding comments.} Insecurity in production level code can also come from 
+\subsection{Limitations from disregarding comments.} Insecurity in production level code can also come from 
 insecure advices given in text forms on Stackoverflow. 
 As we are only considering code snippets we are missing out on them. 
 Ideally we would like to use NLP techniques to detect the insecure advices. Also some code snippets do contains insecure patterns 

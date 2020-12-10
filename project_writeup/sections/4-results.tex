@@ -4,11 +4,12 @@ In this section, we will first describe our data-collection process. Next we wil
 
 \subsection{Data collection} 
   We use dataset from two previous sources ~\cite{meng2018secure,fischer2017stack}. Both of these dataset contain code snippets posted on Stackoverflow. 
-  Fisher et al. crawled 1,161 code snippets posted on Stackoverflow related to Andrioid Securuity ~\cite{fischer2017stack}. They considered a code snippet related to Android security if the code snippets makes API calls to
+  Fisher et al. crawled 1,161 code snippets posted on Stackoverflow related to Andrioid security ~\cite{fischer2017stack}. They considered a code snippet related to Android security if the code snippets makes API calls to
   one of the security services such as Java cryptography, Java secure Communications, public key infrastructure X.509 certificates, and Java authentication - authorization services. The popular crypto libraries used by Andriod developers such as Bouncy Castle, SpongyCastle, Apache TLS/SSL, keyczar, jasypt, and GNU Crypto were also included. 
   
   Meng et al.  extracted 503 code snippets from 22,195 Stackoverflow posts by filtering the posts based on votes, duplications, and absence of code snipeets~\cite{meng2018secure}. In total our study is baded on the dataset by combining these two. Our dataset contains 1,664 code snippets. The timeline of these code snippets are from 2008-2017.
-  \minote{add some more info and some statistics}
+  %\minote{add some more info and some statistics}
+  The average size of the collect code snippets is 46 LoC having a very high standard deviation of 58.
 
 
 %\subsection{Data processing and categorization}
@@ -39,7 +40,7 @@ After converting each successfully repaired code snippets to Jimple IR, we detec
 
 
 Table~\ref{tab:results} shows the total number of code snippets for of the 8 rules (they sum up to more than 813 as some code snippets has two or more rules). Parsed column refers to the number of code snippets, we have been able to convert to Jimple IR after applying the code repair discussed in section~\ref{subsec:code-repair}. We also shows the TP, FN, FN along side the precision, and recall.
-As it can seen we have not been able to run backword flow analysis for rule 3. The reasons are explain the in the appendix.
+As it can seen we have not been able to run backword flow analysis for rule 3. The reasons are explain the in the appendix~\ref{appendix:X509TrustManager}.
 %If any of these set of program statements contains i) 
 % Say you have done the  1,2,4,5, 7,8 correctely. How to present the results? 
 % say you haven trying to address the problem of empty method detection but have not been able to do so. 
@@ -53,7 +54,7 @@ As it can seen we have not been able to run backword flow analysis for rule 3. T
 Rule no & Parsed & TP & FP & FN & Precision & Recall \\ \midrule
 1 & 225 & 85 & 0 & 2 & - & - \\
 2 & 173 & 38 & 0 & 4 & - & - \\
-3 & 219 & - & - & - & - & - \\
+\textcolor{red}{3} & \textcolor{red}{219} & \textcolor{red}{-} & \textcolor{red}{-} & \textcolor{red}{-} & \textcolor{red}{-} & \textcolor{red}{-}\\
 4 & 68 & 19 &  0 & 8& - & - \\
 5 & 40 & 24 & 0 & 3& - & - \\
 6 & 90 & 12 & 0 & 7 & - & -\\ \midrule

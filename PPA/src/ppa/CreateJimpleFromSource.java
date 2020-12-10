@@ -45,7 +45,7 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 	private final static String SRC_CLASSPATH = "/home/islamazhar/eclipse-workspace/PPA/src/";
 	
 	//private final static String CLASS_TO_ANALYZE = "ppa.HelloThread";
-	private final static String CLASS_TO_ANALYZE = "examples.AES.class_";
+	private final static String CLASS_TO_ANALYZE = "examples.X509TrustManager.class_";
 	
 	private final static String OUTPUT_DIR = "examples/output";
 	
@@ -134,7 +134,7 @@ private final static String RT_CLASSPATH = "/home/islamazhar/eclipse-workspace/j
 		    while(it.hasNext()){
 		    	Unit stmt = it.next();
 		    	//System.out.println(it.next().getClass());
-		    	//System.out.println(stmt.toString());
+		    	System.out.println(stmt.toString());
 		    	//System.out.println(stmt.getClass());
 		    	//if (stmt instanceof JAssignStmt) {
 		    	//	JAssignStmt jAssignStmt = (JAssignStmt) stmt;

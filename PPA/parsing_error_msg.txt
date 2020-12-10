@@ -5,3 +5,5 @@ class_93.java:9: Syntax error: unexpected if.
 class_97.java:102: Unclosed string literal
 class_97.java:103: Syntax error: unexpected identifier "result".
 class_105.java:96: Syntax error: unexpected operator }.
+class_1009.java:14: Syntax error: unexpected operator <.
+class_1009.java:26: Syntax error: unexpected operator (.

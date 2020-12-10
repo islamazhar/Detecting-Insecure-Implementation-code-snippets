@@ -1,7 +1,7 @@
 \section{Methodology}
 \label{sec:methodology}
 In this section, we will discuss the pipeline we follow to detect insecure patterns in code snippets as shown in Figure~\ref{fig:pipeline}. 
-We will first discuss about repairing the code snippets (section ~\ref{subsec:code-repair}), and then converting the repaired to code snippets to an Intermidiate representation (IR) to run analysis (section~\ref{subsec:converting-to-IR}). 
+We will first discuss about repairing the code snippets (section ~\ref{subsec:code-repair}), and then converting the repaired to code snippets to an Intermidiate Representation (IR) to run analysis (section~\ref{subsec:converting-to-IR}). 
 Lastly we will finish by describing the techniques we have applied on the converted IR to detect the insecure patterns (section~\ref{subsec:identifying-insecure-patterns}), which we have previously described in section~\ref{sec:insecure-patterns}.     
 \begin{figure*}[t]
   \centering
@@ -17,8 +17,9 @@ Lastly we will finish by describing the techniques we have applied on the conver
 \label{subsec:code-repair}
 % code snippets convey single intents
 While writing code snippets as answers to posted questions, developers tend to be concise and short. The reason being long code snippets 
-has lower chance of being accepted and upvoted by others in online platforms such as Stack Overflow.\fixme{Give a statistic on the avg. 
-length of the code snippets of the dataset} Within a few lines of code, developers try to convey the 
+has lower chance of being accepted and upvoted by others in online platforms such as Stack Overflow.
+%\fixme{Give a statistic on the avg. length of the code snippets of the dataset} 
+Within a few lines of code, developers try to convey the 
 intent hinting at a working solution by asuuming everything other are in place to for sucessful compilation. 
 However this very mindset of developers can leave syntatic errors, missing classes in the code snippets. 
 As a result, converting these code snippets to IR for analysis becomes difficult.
@@ -109,7 +110,9 @@ and the former one is using back flow sensitive analysis.
   \caption{}
   \label{tab:slicing}
  %}
+ \minote{Can you show the slicing critera in Jimple form?}
 \end{table}
+
 
 \subsubsection{Key word base analysis}
 In keyword based analysis, we want to write an regex which can capture the common way developers write the insecure patterns, 
@@ -155,7 +158,7 @@ and has a value of equal to name of the broken hash.
     ....
 \end{lstlisting}
 
-\minote{A formal proof is given in the Appendix.}
+%\minote{A formal proof is given in the Appendix.}
 
 We modified the code base of  as CryptoGuard\footnote{\url{https://github.com/CryptoGuardOSS/cryptoguard}} to achieve our analysis on code snippets. 
 This is for two reasons. Firstly, CryptoGuard already has the basic skelection for use-def analysis, and we just have to change the slicing criteria. 

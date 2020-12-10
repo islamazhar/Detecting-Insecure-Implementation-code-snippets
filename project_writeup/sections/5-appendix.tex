@@ -1,7 +1,7 @@
 %\minote{This is working..}
-\section{Appendix}
+\section*{Appendix}
 \label{sec:appendix}
-\subsection{Insecure patterns in code snippets}
+\section{Examples of insecure patterns in code snippets}
 
 \begin{lstlisting}[caption={A code snippet showing insecure use of AES default encryption mode ECB.}, label={fig:aes-encryption-example}]
     private byte[] encrypt(byte[] raw, byte[] clear) {
@@ -57,10 +57,19 @@ label={listing:AllHostNameVerifier}]
       ...
       ((HttpsURLConnection) connection).setHostnameVerifier(new AllowAllHostnameVerifier());
       ...
-  } 
+    } 
 }
 \end{lstlisting}
 
+\begin{lstlisting}[caption={A code snippet showing insecure use of turning off CSRF protection.}, 
+label={listing:csrf-protection}]
+    ...
+    @Override
+    protected void configure(HttpSecurity hs) throws Exception {
+      hs.csrf.disable()
+    }
+    ...
+\end{lstlisting}
 
 
 
@@ -99,3 +108,26 @@ label={fig:aes-encryption-example}]
     }
 \end{lstlisting}
 \fi
+%=======================================================================================================================================
+\section{Failure to detect abuse of X509TrustManager Verifier interface insecure pattern}
+\label{appendix:X509TrustManager}
+\begin{figure*}[t]
+\includegraphics[width=\linewidth]{Figures/Java_TrustManager.png}
+\caption{An example of insecure X509TrustManager implementation which we have not been able to detect. 
+Corresponding Jimple representation is show in Figure~\ref{fig:trustmanager-jimple} }
+\label{fig:trustmanager}
+\end{figure*}
+
+\label{appendix:X509TrustManager}
+\begin{figure*}[t]
+\includegraphics[width=\linewidth]{Figures/Jimple_TrustManager.png}
+\caption{Jimple represention of the code snippets in Figure~\ref{fig:trustmanager}. The interesting part is \texttt{\_FakeX509TrustManager} is declared as phantom class.}
+\label{fig:trustmanager-jimple}
+\end{figure*}
+
+\section{Future work on Synthesizing secure code}
+\section{Links to source files}
+\begin{itemize}
+\item source code: \url{https://github.com/islamazhar/Detecting-Insecure-Implementation-code-snippets/tree/master/PPA}
+\item Data set of all code snippet: \url{https://github.com/islamazhar/Detecting-Insecure-Implementation-code-snippets/tree/master/PPA/src/examples}
+\end{itemize}

@@ -16,7 +16,7 @@ public class class_1056 {
 
     private static TrustManager[] trustManagers;
 
-    public static class class_1056 implements javax.net.ssl.X509TrustManager {
+    public static class _FakeX509TrustManager implements javax.net.ssl.X509TrustManager {
         private static final X509Certificate[] _AcceptedIssuers = new X509Certificate[]{};
 
         public void checkClientTrusted(X509Certificate[] arg0, String arg1)
