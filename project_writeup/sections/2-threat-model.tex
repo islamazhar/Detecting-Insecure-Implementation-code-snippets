@@ -12,7 +12,7 @@
    \scriptsize
 \begin{tabular}{|l|l|l|l|}
   \toprule
-  \begin{tabular}[c]{@{}l@{}}Rule\\ No\end{tabular} & Description                                  & Vulnerability  \\ \midrule 
+  \begin{tabular}[c]{@{}l@{}}Insecure\\Pattern \#\end{tabular} & Description                                  & Vulnerability  \\ \midrule 
   1                                                 & AES default encryption mode ECB              & Side channel attack    \\ 
   2                                                 & Insecure cryptographic hash                  & Collision attack    \\  
   3                                                 & Abuse of X509TrustManager Verifier Interface & \multicolumn{1}{c|}{SSL/TLS MitM attack} \\ 
@@ -22,50 +22,61 @@
   8                                                 & Turning of CSRF protection                   & CSRF attack \\
   \bottomrule
   \end{tabular}
-  \caption{}
+  \caption{The 8 most insecure patterns found on code snippets.}
   \label{tab:insecure-patterns}
 % }
 \end{table}
-
 %%%Insecure pattern
 %\subsection{Insecure Patterns}
-We will now summerize the insecure patterns our method aims to detect in the following paragraphs and in Table~\ref{tab:insecure-patterns}. 
+We will now summerize the 8 common insecure patterns our method aims to detect in the comming paragraphs and in Table~\ref{tab:insecure-patterns}. 
 For each insecure patterns, we will also describe the security risks it presents, and its secure usage from the literature. 
 This will give us a sense what we want our method to detect i.e, the presence of insecure patterns or the absence of secure usage.
 
 %\minote{How did we come up with these insecure patterns? Say why this is not secure and show code snippets in the Appendix. Also how we are doing to identify that is not secure..}
 
 \subsection{AES default encryption mode ECB }
-AES is one widely adopted and used encryption standards in the developer community. Therefore it is no surprise that a large number of code snippets uses AES for encryption \fixme{Add some \% number}. In Java an instance of AES can be created using \texttt{javax.crypto.Cipher}. However \texttt{javax.crypto.Cipher} class uses Electornic Codebook (ECB) as the default mode of operation when  "AES" is passed as transformation parameter to \texttt{getInstance} method \fixme{See the code in the Appendix A}. While ECB-encrypted ciphertext allows random access to each block, it can also leak information via side channel attacks \fixme{Cite source}. However developers being unaware of this default behavior insecure behaviour of AES, share code snippets without any considerations that uses insecure ECB mode for encryption. Instead developers should be using Block Chaining (CBC) or Galios/Counter Mode (GCM) which are not vulnerable to side channel attacks as shown in appendix.
+AES is one widely adopted and used encryption standards in the developer community. Therefore it is no surprise that a large number of code snippets uses AES for encryption~\cite{aes-encryption}. 
+In Java an instance of AES can be created using \texttt{javax.crypto.\-Cipher} class. However \texttt{javax.crypto.Cipher} class uses Electornic Codebook (ECB) as the default mode of operation when  "AES" is passed as transformation parameter to \texttt{getInstance} method (as shown in listing~\ref{fig:aes-encryption-example}). 
+While ECB-encrypted ciphertext allows random access to each block, it can also leak information via side channel attacks~\cite{egele2013empirical}. 
+However developers being unaware of this default behavior insecure behaviour of AES, share code snippets without any considerations that uses insecure ECB mode for encryption. Instead developers should be using Block Chaining (CBC) or Galios/Counter Mode (GCM) which are not vulnerable to side channel attacks. %as shown in appendix.
 
 \subsection{Abuse of X509TrustManager Verifier Interface}
-X509TrustManager Verifier interface is popular among developers to instantiate TrustManager class. Ideally a secure implementation of X509TrustManager should i) throw exception after validating a cetificate in \texttt{checkServerTrusted} method, ii) provide a valid list of certificates in \texttt{getAcceptedIssuers} method, and iii) throw exceptions for self signed certificates. However while writing code snippets developers tend to leave empty methods to implement  the X509TrustManager interface. As a result the X509TrustManager Interface acceptes any certficate including the ones which are not signed by a trusted cettificate authority. This enables a provision for Man-in-the-middle (MitM) attacks.  
+X509TrustManager Verifier interface is popular among developers to instantiate TrustManager class. Ideally a secure implementation of X509TrustManager should i) throw exception after validating a cetificate in \texttt{checkServerTrusted} method, ii) provide a valid list of certificates in \texttt{getAcceptedIssuers} method, 
+and iii) throw exceptions for self signed certificates. However while writing code snippets developers tend to leave empty methods to implement  the X509TrustManager interface. 
+As a result the X509TrustManager interface acceptes any certficate including the ones which are not signed by a trusted cettificate authority. This enables a provision for Man-in-the-middle (MitM) attacks.
+% Give a code listing?  
 
 \subsection{Insecure cryptographic hash}
-A cryptographic hash function produces fixed-length unique alphanumeric string called message digest for any arbitrary message. This unique message digest can be used latter for verifing crypto properties of the message e.g., message integrity, digital signature, and authentication. However if two different messages produces the same message digest i.e., a collusion happens, then attcker can compromise these crypto properties. A cryptographic is broken if attacker has systemic practical way to produces collusion for different message. The list of popular but broken hash functions includes SHA1, MD4, MD5, and MD2. These hash functions produce collisions that cause cryptographic vulnerabilities, and hence should be avoided. However in code snippets developers have been using these popular broken hashes as shown in listing~\ref{?}. 
+A cryptographic hash function produces fixed-length unique alphanumeric string called message digest for any arbitrary long message. This unique message digest can be used latter for verifing important crypto properties of the message e.g., message integrity, digital signature, and authentication. However if two different messages produces the same message digest i.e., a collusion happens, then attcker can compromise these crypto properties. A cryptographic is broken if attacker has systemic practical way to produces collusion for different message. The list of popular but broken hash functions includes SHA1, MD4, MD5, and MD2. These hash functions produce collisions that cause cryptographic vulnerabilities, and hence should be avoided. However while writing code snippets developers have been using these popular broken hashes as shown in listing~\ref{fig:aes-without-vars}. 
 
 
 \subsection{Absence of performing hostname verification}
 
 
-Ideally to perform a hostname verification, developer has to implement the \texttt{javax.net.ssl.HostnameVerifier} by using \texttt{java.net.ssl.SSLSession} parameter inside the verify method. However in many cases this \texttt{verify} method is always set to return true as shown in listing~\ref{?}. The reason being while writing code snippets for brevity this dummy return true will not throw any excpetions.  However this type of workaround can cause security threats such as URL spoofing attacks.  URL spoofing makes it simpler for numerous cyber-attacks (e.g., identity theft, phishing).
+Ideally to perform a hostname verification, developer has to implement the \texttt{javax.net.ssl.HostnameVerifier} by using \texttt{java.net.\-ssl.SSLSession} parameter 
+inside the \texttt{verify} method. However in many cases this \texttt{verify} method is always set to return true as shown in listing~\ref{listing:Absence-of-performing-hostname-verification}. 
+The reason being while writing code snippets for brevity this dummy return true will not throw any excpetions.  
+However this type of workaround can cause security threats such as URL spoofing attacks.  
+URL spoofing makes it simpler for numerous cyber-attacks (e.g., identity theft, phishing)~\cite{url-spoofing}.
 
 \subsection{Weak key length}
 The strength of asymetric encryotion (e.g., RSA, ECC) depends on using sufficiently large key length. 
-Since 2015, NIST recommends a minimum of 2048-bit keys for RSA,[14] an update to the widely-accepted recommendation of a 1024-bit minimum since at least 2002. This ensures that the key space is large enough to prevent any practical brute force attack.   
-However while writing  code snippets developers have been using key length of less than 2048 disregarding this recommendation. 
+Since 2015, NIST recommends a minimum of 2048-bit keys for RSA an update to the widely-accepted recommendation of a 1024-bit minimum since 2002~\cite{barker2009recommendation}. This ensures that the key space is large enough to prevent any practical brute force attack.   
+However while writing  code snippets developers have been using key length of less than 2048 disregarding this recommendation as shown in listing~\ref{listing:Weak-key-length}.
 
 \subsection{Static/constant/predictable keys/IV }
 %ThisISSecretEncryptionKey, MyDifficultPaaasw.
-Predictable keys/ Initialization Vectors (IV) are a major source insecurity in the code snippets. Raw keys and raw IVs created from empty byte arrays
-are easily guessable by attackers. Additionally some code snippets derive keys directly from simple and insecure passphrases as shown in listing~\ref{}. 
-
-Static constant keys are suspectible to leaks. As oftentimes attackers can decompile the application and get the static hardcoded keys.  To avoid this kind of attacks, developers should avoid using static constant keys. \texttt{javax.crypto.spec.SecretKeySpec} and \texttt{javax.crypto.spec.PBEKeySpec} are two popular ways to generate secret keys used for encryption. Both of these API takes a byte array to generate the secret keys. However if the byte array is constant or hardcoded inside the code, the adversary can easily read the cryptographic key and may obtain sensitive information. This is the same case for storing keys in a keystore using \texttt{java.security.KeyStore API}. The secret keys by which is key stored is locked for safely storing the keys should take a byte array is not static.
+Predictable keys/ initialization vectors (IV) are a major source insecurity in the code snippets. 
+Raw keys and raw IVs created from empty byte arrays
+are easily guessable by attackers. 
+Additionally some code snippets derive keys directly from simple and insecure passphrases as shown in listing~\ref{listing:Static-constant-predictable-keys-IV}. 
+Static constant keys are suspectible to leaks. As oftentimes attackers can decompile the application and get the static hardcoded keys.  To avoid this kind of attacks, developers should avoid using static constant keys. \texttt{javax.crypto.spec.SecretKeySpec} and \texttt{javax.crypto.spec.\-PBEKeySpec} are two popular ways to generate secret keys used for encryption. Both of these API takes a byte array to generate the secret keys. However if the byte array is constant or hardcoded inside the code, the adversary can easily read the cryptographic key and may obtain sensitive information. This is the same case for storing keys in a keystore using \texttt{java.security.KeyStore API}. The secret keys by which is key stored is locked for safely storing the keys should take a byte array is not static.
 
 
 \subsection{Presence of AllHostNameVerifier}
-\texttt{org.apache.http.conn.ssl.SSLConnectionSocketFactory} provides  a static field accept all certificates. This is same as using empty methods as discussed in~\ref{}. 
-This time developers can just use ALLOW\_ALL\_HOSTNAME\_VERIFIER static field to  do this. As this is a very easy way to avoid errors, in code snippets developers insensibly uses them frequently without considering the insecurity associated with using it.
+\texttt{org.apache.http.conn.ssl.SSLConnectionSocketFactory} provides  a static field ALLOW\_ALL\_HOSTNAME\_VERIFIER to allow accepting all certificates.  
+%This time developers can just use ALLOW\_ALL\_HOSTNAME\_VERIFIER static field to  do this. 
+As this is a very easy way to avoid errors, in code snippets developers insensibly uses them frequently without considering the insecurity associated with using it as shown in listing~\ref{listing:AllHostNameVerifier}.
 
 \subsection{Turning of CSRF protection}
 Cross site request forgery (CSRF) is a serious attack that tricks the a web browser by abusing the brower cookie authentication mechanism to execute privilege unwanted actions. To protect against such attacks ideally CSRF-Token should be included in all POST, PUT, DELETE requests.

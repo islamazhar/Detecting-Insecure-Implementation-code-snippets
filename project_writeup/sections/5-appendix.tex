@@ -1,16 +1,9 @@
 %\minote{This is working..}
+\section{Appendix}
 \label{sec:appendix}
-\begin{lstlisting}[caption={A real code snippet taken from Stackoverflow. I want to build a tool which after analyzing the code snippet will highlight the part of the code that is insecure and suggest an alternative secure implementation as showed in the figure.}, label={fig:motivating-example}]
-    private byte[] encrypt(byte[] raw, byte[] clear) {
-      ...
-      CIPHER_MODE = "AES"
-      Cipher cipher = Cipher.getInstance(CIPHER_MODE);}
-      ....
-      return encrypted
-    }
-     \end{lstlisting}
+\subsection{Insecure patterns in code snippets}
 
-\begin{lstlisting}[caption={A real code snippet taken from Stackoverflow. I want to build a tool which after analyzing the code snippet will highlight the part of the code that is insecure and suggest an alternative secure implementation as showed in the figure.}, label={fig:motivating-example}]
+\begin{lstlisting}[caption={A code snippet showing insecure use of AES default encryption mode ECB.}, label={fig:aes-encryption-example}]
     private byte[] encrypt(byte[] raw, byte[] clear) {
       ...
       Cipher cipher = Cipher.getInstance("AES");}
@@ -19,6 +12,62 @@
     }
      \end{lstlisting}
 
+\begin{lstlisting}[caption={A code snippet showing insecure use of Absence of performing hostname verification.}, 
+label={listing:Absence-of-performing-hostname-verification}]
+   public static void allowAllSSL() {
+            HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+
+                @Override
+                public boolean verify(final String hostname, final SSLSession session) {
+                    return true;
+                }
+            });
+      ...
+   }
+\end{lstlisting}
+
+\begin{lstlisting}[caption={A code snippet showing insecure use of weak key length.}, 
+label={listing:Weak-key-length}]
+
+public byte[] RSAEncrypt(final String plain) throws ... {
+    kpg = KeyPairGenerator.getInstance("RSA");
+    kpg.initialize(1024);
+    kp = kpg.genKeyPair();
+    publicKey = kp.getPublic();
+    privateKey = kp.getPrivate();
+
+    cipher = Cipher.getInstance("RSA");
+    ... 
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={A code snippet showing insecure use of static predictable IV.}, 
+label={listing:Static-constant-predictable-keys-IV}]
+    ...
+    byte[] salt = "abababababababababa bab".getBytes();
+    byte[] iv = "1234567890abcdef".getBytes();
+    ... 
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={A code snippet showing insecure use of AllHostNameVerifier.}, 
+label={listing:AllHostNameVerifier}]
+    ...
+    public ServiceConnectionSE(String url) throws IOException {
+      ...
+      ((HttpsURLConnection) connection).setHostnameVerifier(new AllowAllHostnameVerifier());
+      ...
+  } 
+}
+\end{lstlisting}
+
+
+
+
+
+
+%=============================================================================================================
+\iffalse
 \begin{lstlisting}[caption={A real code snippet taken from Stackoverflow. I want to build a tool which after analyzing the code snippet will highlight the part of the code that is insecure and suggest an alternative secure implementation as showed in the figure.}, label={fig:motivating-example}]
 static void decrypt() {
     ...
@@ -36,3 +85,17 @@ static void decrypt() {
       return encrypted
     }
 \end{lstlisting}
+
+
+
+\begin{lstlisting}[caption={A code snippet showing insecure use of AES default encryption mode ECB.}, 
+label={fig:aes-encryption-example}]
+    private byte[] encrypt(byte[] raw, byte[] clear) {
+      ...
+      CIPHER_MODE = "AES"
+      Cipher cipher = Cipher.getInstance(CIPHER_MODE);}
+      ....
+      return encrypted
+    }
+\end{lstlisting}
+\fi
