@@ -24,7 +24,7 @@ package examples.AES;
   public class class_218 extends Activity {
 EditText output, outputDecrypt;
 EditText input;
-String plainData = ";
+String plainData = "";
 String cipherText, decryptedText;
 KeyGenerator keyGen;
 SecretKey secretKey;

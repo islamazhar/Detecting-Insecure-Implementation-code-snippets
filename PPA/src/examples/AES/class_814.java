@@ -44,7 +44,7 @@ public class class_814 {
             byte[] encrypted = c.doFinal(data);
             return Base64.encodeToString(encrypted, Base64.DEFAULT);
         } catch (Exception e) {
-            return ";
+            return "";
         }
     }
 
@@ -73,12 +73,12 @@ public class class_814 {
 
             byte[] decrypted = d_c.doFinal(Base64.decode(strdata,
                     Base64.DEFAULT));
-            String decryptedStr = ";
+            String decryptedStr = "";
             for (int i = 0; i < decrypted.length; i++)
                 decryptedStr += (char) decrypted[i];
             return decryptedStr;
         } catch (Exception e) {
-            return ";
+            return "";
         }
     }
 }

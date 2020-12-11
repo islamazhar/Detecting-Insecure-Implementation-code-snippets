@@ -99,7 +99,7 @@ public class class_97 {
 
     public static String toHex(byte[] buf) {
         if (buf == null)
-            return ";
+            return "";
         StringBuffer result = new StringBuffer(2*buf.length);
         for (int i = 0; i < buf.length; i++) {
             appendHex(result, buf[i]);

@@ -79,7 +79,7 @@ public class class_524 {
         }
 
         int len = data.length;
-        String str = ";
+        String str = "";
         for (int i=0; i<len; i++) {
             if ((data[i]&0xFF)<16)
                 str = str + "0" + java.lang.Integer.toHexString(data[i]&0xFF);

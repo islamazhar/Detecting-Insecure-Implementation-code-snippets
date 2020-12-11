@@ -21,7 +21,7 @@ public String getEncrypt(final byte[] iv, final String message) throws GeneralSe
     return encryptedText.toString();
   } 
   catch (final UnsupportedEncodingException e1) { }
-  return ";
+  return "";
 }
 
 }

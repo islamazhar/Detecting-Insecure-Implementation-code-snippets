@@ -4,7 +4,7 @@ public class class_315 {
 
         try {
             SharedPreferences prefs = context.getSharedPreferences("appname", 0);
-            if (prefs.getString("SECRET_KEY",") == ") {
+            if (prefs.getString("SECRET_KEY","") == "") {
                 secretKeySpec = GenerateSecretKeySpecs();
                 String stringSecretKey = Base64.encodeToString(
                         secretKeySpec.getEncoded(), Base64.DEFAULT);
@@ -14,11 +14,11 @@ public class class_315 {
                 editor.commit();
 
             }
-            if (prefs.getString("SECRET_KEY",") != ") {
+            if (prefs.getString("SECRET_KEY","") != "") {
                 byte[] encodedBytes = null;
 
                 Cipher c = Cipher.getInstance("AES");
-                String key =prefs.getString("SECRET_KEY",");
+                String key =prefs.getString("SECRET_KEY","");
 
                 byte[] encodedKey = Base64.decode(key, Base64.DEFAULT);
                 SecretKey originalKey = new SecretKeySpec(encodedKey, 0,

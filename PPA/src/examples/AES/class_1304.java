@@ -44,7 +44,7 @@ public String encode(String text)
         } catch (InvalidAlgorithmParameterException e) {
             e.printStackTrace();
         }
-        return ";
+        return "";
     }
 
 /**

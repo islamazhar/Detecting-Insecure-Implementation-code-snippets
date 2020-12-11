@@ -27,7 +27,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
     try {
         // This value was got when did run it from an 2.3.3 device a Galaxy SII running Android 4.0.4
-        String encrypted = ";
+        String encrypted = "";
 
         // Uncomment the line bellow and comment the line above to run it on an Android 4.1.2 or older.
         // String encrypted = EncodeDecodeAES.encrypt(seedWith16Chars, textToEncrypt);

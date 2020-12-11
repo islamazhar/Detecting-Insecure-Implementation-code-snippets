@@ -2,12 +2,12 @@ package examples.AES;
 public class class_316 { 
 public String decryptString(String dataToDecrypt) {
         SharedPreferences prefs= context.getSharedPreferences("appname", 0);
-        if (prefs.getString("SECRET_KEY",") != ") {
+        if (prefs.getString("SECRET_KEY","") != "") {
             byte[] decodedBytes = null;
             try {
                 Cipher c = Cipher.getInstance("AES");
 
-                String key = prefs.getString("SECRET_KEY",")
+                String key = prefs.getString("SECRET_KEY","")
                 byte[] encodedKey = Base64.decode(key, Base64.DEFAULT);
                 SecretKey originalKey = new SecretKeySpec(encodedKey, 0,
                         encodedKey.length, "AES");

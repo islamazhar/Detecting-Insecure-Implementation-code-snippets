@@ -2,7 +2,7 @@ package examples.AES;
 public class class_1272 { 
    KeyStore ks = KeyStore.getInstance();
  // get the names of all keys created by our app
- String[] keyNames = ks.saw(");
+ String[] keyNames = ks.saw("");
 
  // store a symmetric key in the keystore
  SecretKey key = Crypto.generateKey();

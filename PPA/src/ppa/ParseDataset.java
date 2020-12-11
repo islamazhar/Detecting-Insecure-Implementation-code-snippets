@@ -82,7 +82,7 @@ public class ParseDataset {
 
 		boolean added_class_name = false;
 		try {
-			FileWriter array_index = new FileWriter("array_index_aes.txt");
+			FileWriter array_index = new FileWriter("array_index.txt");
 			ArrayList<String> code = new ArrayList<>();
 			BufferedReader br = new BufferedReader(new FileReader(in_file)); 
 			while ((line = br.readLine()) != null) {
@@ -132,7 +132,7 @@ public class ParseDataset {
 				}
 				
 				if (start == 1) {
-					line = this.sanitize(line);
+					//line = this.sanitize(line);
 					if (line.contains("public") && line.contains("class")) {
 						line = this.rename_class(line, class_name);
 						added_class_name = true;

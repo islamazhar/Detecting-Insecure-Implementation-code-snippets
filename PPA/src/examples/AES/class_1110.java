@@ -57,7 +57,7 @@ public static String encrypt(String seed, String cleartext) throws Exception {
 
 Â  Â  Â  Â public static String toHex(byte[] buf) {
 Â  Â  Â  Â  Â  Â  Â  Â if (buf == null)
-Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â return ";
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â return "";
 Â  Â  Â  Â  Â  Â  Â  Â StringBuffer result = new StringBuffer(2*buf.length);
 Â  Â  Â  Â  Â  Â  Â  Â for (int i = 0; i < buf.length; i++) {
 Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â appendHex(result, buf[i]);

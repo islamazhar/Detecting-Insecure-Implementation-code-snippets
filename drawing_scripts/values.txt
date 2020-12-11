@@ -1,0 +1,9 @@
+AES --> 501 | 225 | 101 
+Insecure crypto Hash 201 | 173 | 14 
+Absence of X509TrustManager 313 | 219 | 153
+Absence of performing hostname verifier 68 | 23 | 20
+Weak key Length 40  | 12 | 4
+Static/consistant/predictable IV 90 | 43 | 4
+
+Presene of AllHostNamer 68 | 12 | 3
+Turning off CSRF 20 | 14 | 12

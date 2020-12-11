@@ -62,7 +62,7 @@ public class class_508 {
 
     public String decrypt(String password, byte[] encryptedText) {
 
-        String cleartext = ";
+        String cleartext = "";
 
         try {
 

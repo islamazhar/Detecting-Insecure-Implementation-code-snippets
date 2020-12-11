@@ -4,7 +4,7 @@
 %\begin{itemize}
 %  \item Limit analysis to some specifice crypto functions.
 %  \item For rule 1, 2, 7, 8 we just did a keyword search on methods we are interested in.
-%  \item For 4, 5, 6, 7 we have to do a backword flow analysis. 
+%  \item For 4, 5, 6, 7 we have to do a backward flow analysis. 
 %\end{itemize}
 
 \begin{table}[ht]
@@ -22,46 +22,64 @@
   8                                                 & Turning of CSRF protection                   & CSRF attack \\
   \bottomrule
   \end{tabular}
-  \caption{The 8 most insecure patterns found on code snippets.}
+  \caption{The 8 most insecure patterns found on code snippets from Stack Overflow}
   \label{tab:insecure-patterns}
 % }
 \end{table}
 %%%Insecure pattern
 %\subsection{Insecure Patterns}
-We will now summerize the 8 common insecure patterns our method aims to detect in the comming paragraphs and in Table~\ref{tab:insecure-patterns}. 
+We will now summerize the 8 common insecure patterns our method aims to detect in the coming paragraphs and in Table~\ref{tab:insecure-patterns}. 
 For each insecure patterns, we will also describe the security risks it presents, and its secure usage from the literature. 
 This will give us a sense what we want our method to detect i.e, the presence of insecure patterns or the absence of secure usage.
 
 %\minote{How did we come up with these insecure patterns? Say why this is not secure and show code snippets in the Appendix. Also how we are doing to identify that is not secure..}
 
 \subsection{AES default encryption mode ECB }
-AES is one widely adopted and used encryption standards in the developer community. Therefore it is no surprise that a large number of code snippets uses AES for encryption~\cite{aes-encryption}. 
-In Java an instance of AES can be created using \texttt{javax.crypto.\-Cipher} class. However \texttt{javax.crypto.Cipher} class uses Electornic Codebook (ECB) as the default mode of operation when  "AES" is passed as transformation parameter to \texttt{getInstance} method (as shown in listing~\ref{fig:aes-encryption-example}). 
+AES is one widely adopted and used encryption standards in the developer community. Therefore it is no surprise that a 
+large number of code snippets uses AES for encryption~\cite{aes-encryption}. 
+In Java an instance of AES can be created using \texttt{javax.crypto.\-Cipher} class. 
+However \texttt{javax.crypto.Cipher} class uses Electornic Codebook (ECB) as the 
+default mode of operation when  "AES" is passed as transformation parameter to \texttt{getInstance} method (as shown in listing~\ref{fig:aes-encryption-example}). 
 While ECB-encrypted ciphertext allows random access to each block, it can also leak information via side channel attacks~\cite{egele2013empirical}. 
-However developers being unaware of this default behavior insecure behaviour of AES, share code snippets without any considerations that uses insecure ECB mode for encryption. Instead developers should be using Block Chaining (CBC) or Galios/Counter Mode (GCM) which are not vulnerable to side channel attacks. %as shown in appendix.
+However developers being unaware of this default behavior insecure behaviour of AES, share code snippets without 
+any considerations that uses insecure ECB mode for encryption. 
+Instead developers should be using Block Chaining (CBC) or Galios/Counter Mode (GCM) which are not vulnerable to side channel attacks. %as shown in appendix.
+  
+\subsection{Insecure cryptographic hash}
+A cryptographic hash function produces fixed-length unique alphanumeric string called message digest for any arbitrary long message. 
+This unique message digest can be used latter for verifing important crypto properties of the message e.g., message integrity, digital signature, 
+and authentication. 
+However if two different messages produces the same message digest i.e., a collusion happens, 
+then attacker can compromise these crypto properties. A cryptographic is broken if attacker has systemic practical way to produces collusion for 
+different message. The list of popular but broken hash functions includes SHA1, MD4, MD5, and MD2. These hash functions produce collisions that 
+cause cryptographic vulnerabilities, and hence should be avoided. However while writing code snippets developers have been using these popular 
+broken hashes as shown in listing~\ref{fig:aes-without-vars}. 
+
 
 \subsection{Abuse of X509TrustManager Verifier Interface}
-X509TrustManager Verifier interface is popular among developers to instantiate TrustManager class. Ideally a secure implementation of X509TrustManager should i) throw exception after validating a cetificate in \texttt{checkServerTrusted} method, ii) provide a valid list of certificates in \texttt{getAcceptedIssuers} method, 
+X509TrustManager Verifier interface is popular among developers to instantiate TrustManager class. 
+Ideally a secure implementation of X509TrustManager should i) throw exception after validating a cetificate in \texttt{checkServerTrusted} method, 
+ii) provide a valid list of certificates in \texttt{getAcceptedIssuers} method, 
 and iii) throw exceptions for self signed certificates. However while writing code snippets developers tend to leave empty methods to implement  the X509TrustManager interface. 
-As a result the X509TrustManager interface acceptes any certficate including the ones which are not signed by a trusted cettificate authority. This enables a provision for Man-in-the-middle (MitM) attacks.
-% Give a code listing?  
-
-\subsection{Insecure cryptographic hash}
-A cryptographic hash function produces fixed-length unique alphanumeric string called message digest for any arbitrary long message. This unique message digest can be used latter for verifing important crypto properties of the message e.g., message integrity, digital signature, and authentication. However if two different messages produces the same message digest i.e., a collusion happens, then attcker can compromise these crypto properties. A cryptographic is broken if attacker has systemic practical way to produces collusion for different message. The list of popular but broken hash functions includes SHA1, MD4, MD5, and MD2. These hash functions produce collisions that cause cryptographic vulnerabilities, and hence should be avoided. However while writing code snippets developers have been using these popular broken hashes as shown in listing~\ref{fig:aes-without-vars}. 
+As a result the X509TrustManager interface acceptes any certficate including the ones which are not signed by a trusted certificate authority. This enables a provision for Man-in-the-middle (MitM) attacks.
+% Give a code listing?
 
 
 \subsection{Absence of performing hostname verification}
 
 
-Ideally to perform a hostname verification, developer has to implement the \texttt{javax.net.ssl.HostnameVerifier} by using \texttt{java.net.\-ssl.SSLSession} parameter 
-inside the \texttt{verify} method. However in many cases this \texttt{verify} method is always set to return true as shown in listing~\ref{listing:Absence-of-performing-hostname-verification}. 
-The reason being while writing code snippets for brevity this dummy return true will not throw any excpetions.  
+Ideally to perform a hostname verification, developer has to implement the \texttt{javax.net.ssl.HostnameVerifier} by 
+using \texttt{java.net.\-ssl.SSLSession} parameter 
+inside the \texttt{verify} method. However in many cases this \texttt{verify} method is always set to return true as shown in 
+listing~\ref{listing:Absence-of-performing-hostname-verification}. 
+The reason being while writing code snippets for brevity this dummy return true will not throw any exceptions.  
 However this type of workaround can cause security threats such as URL spoofing attacks.  
 URL spoofing makes it simpler for numerous cyber-attacks (e.g., identity theft, phishing)~\cite{url-spoofing}.
 
 \subsection{Weak key length}
-The strength of asymetric encryotion (e.g., RSA, ECC) depends on using sufficiently large key length. 
-Since 2015, NIST recommends a minimum of 2048-bit keys for RSA an update to the widely-accepted recommendation of a 1024-bit minimum since 2002~\cite{barker2009recommendation}. This ensures that the key space is large enough to prevent any practical brute force attack.   
+The strength of asymmetric encryotion (e.g., RSA, ECC) depends on using sufficiently large key length. 
+Since 2015, NIST recommends a minimum of 2048-bit keys for RSA an update to the widely-accepted recommendation of a 1024-bit minimum 
+since 2002~\cite{barker2009recommendation}. This ensures that the key space is large enough to prevent any practical brute force attack.   
 However while writing  code snippets developers have been using key length of less than 2048 disregarding this recommendation as shown in listing~\ref{listing:Weak-key-length}.
 
 \subsection{Static/constant/predictable keys/IV }
@@ -78,6 +96,6 @@ Static constant keys are suspectible to leaks. As oftentimes attackers can decom
 %This time developers can just use ALLOW\_ALL\_HOSTNAME\_VERIFIER static field to  do this. 
 As this is a very easy way to avoid errors, in code snippets developers insensibly uses them frequently without considering the insecurity associated with using it as shown in listing~\ref{listing:AllHostNameVerifier}.
 
-\subsection{Turning of CSRF protection}
+\subsection{Turning off CSRF protection}
 Cross site request forgery (CSRF) is a serious attack that tricks the a web browser by abusing the brower cookie authentication mechanism to execute privilege unwanted actions. To protect against such attacks ideally CSRF-Token should be included in all POST, PUT, DELETE requests.
 However the from code snippets related to Java Spring security framework, we have found that the developers tend to turn of the CSRF protection forcefully to avoid getting errors (see listing~\ref{listing:csrf-protection}). 

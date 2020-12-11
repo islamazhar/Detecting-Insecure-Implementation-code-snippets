@@ -60,7 +60,7 @@ public String encode(Context context, String password, String text)
     } catch (InvalidAlgorithmParameterException e) {
         e.printStackTrace();
     }
-    return ";
+    return "";
 }
 
 /**
@@ -117,7 +117,7 @@ public String decode(Context context, String password, String text)
     } catch (InvalidAlgorithmParameterException e) {
         e.printStackTrace();
     }
-    return ";
+    return "";
 }
 
 /**

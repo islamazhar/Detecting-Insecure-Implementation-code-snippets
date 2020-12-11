@@ -72,7 +72,7 @@ public class class_1044 extends Activity {
     }
 
     private byte[] getKey(String password) throws UnsupportedEncodingException {
-        String key = ";
+        String key = "";
         while (key.length() < 16)
             key += password;
         return key.substring(0, 16).getBytes("UTF-8");

@@ -111,17 +111,31 @@ label={fig:aes-encryption-example}]
 %=======================================================================================================================================
 \section{Failure to detect abuse of X509TrustManager Verifier interface insecure pattern}
 \label{appendix:X509TrustManager}
+Unfortunately we were unable to detect insecure use of X509Trust\-Manager. 
+According to our understanding, this is because X509Trust\-Manager is written as
+annonymous class in the code snippets by developers. PPA can not properly express 
+the  annonymous class in Jimple form. We refer the reader to consult Figure~\ref{fig:trustmanager} 
+where \texttt{FakeX509TrustManager} class is declared  as annonymous class,  
+and it corresponding jimple represention~\ref{fig:trustmanager-jimple} where
+\texttt{FakeX509TrustManager} is delcared as phantom class. 
+This means it is class for which PPA can not find the implementation.
+Subsecquent use of \texttt{FakeX509Trust\-Manager} are replaced by MAGICCLASS hence.
+
+This can be either of the  following two reasons:
+\begin{itemize}  
+\item Jimple grammer is simple, and can not express Annoymous class.
+\item PPA is built on top of a old version of soot 2.2.4 and Java 1.4. The current version of Soot is 4.2.1 which runs on Java 1.9. 
+As PPA depends on an outdatet version of Soot and Java, it may cause the problem of not being able to express Annoymous class in Jimple format.
+\end{itemize}   
 \begin{figure*}[t]
 \includegraphics[width=\linewidth]{Figures/Java_TrustManager.png}
 \caption{An example of insecure X509TrustManager implementation which we have not been able to detect. 
 Corresponding Jimple representation is show in Figure~\ref{fig:trustmanager-jimple} }
 \label{fig:trustmanager}
 \end{figure*}
-
-\label{appendix:X509TrustManager}
 \begin{figure*}[t]
 \includegraphics[width=\linewidth]{Figures/Jimple_TrustManager.png}
-\caption{Jimple represention of the code snippets in Figure~\ref{fig:trustmanager}. The interesting part is \texttt{\_FakeX509TrustManager} is declared as phantom class.}
+\caption{Jimple represention of the code snippets in Figure~\ref{fig:trustmanager}. The interesting part is \texttt{\_FakeX509TrustManager} is declared as phantom class (highlighted in yellow color).}
 \label{fig:trustmanager-jimple}
 \end{figure*}
 

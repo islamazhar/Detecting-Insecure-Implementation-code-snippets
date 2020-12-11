@@ -11,50 +11,75 @@
    \end{figure}
    
    %\textcolor{blue}{we can't also using testing to test the code snippet mention it somewhere...}
-   %\note{Certainly elsewhere my do allowance at. The address farther six hearted hundred towards husband. Strangers ye to he sometimes propriety in. She right plate seven has. Bed who perceive judgment did marianne.}
+   %\note{Certainly elsewhere my do allowance at. The address farther six hearted hundred towards husband. 
+   %Strangers ye to he sometimes propriety in. She right plate seven has. Bed who perceive judgment did marianne.}
    Stack Overflow (SO) is regarded as one of the most popular online helping platforms for software developers~\cite{8816778}. 
-   SO seeks to help by creating an eco-system of online developer community. 
-   In this eco-system one developer can ask for solutions to the to the problems one is facing, while other developers can interact by posting code snippets, advices, to solve those asked problems. 
+   SO seeks to help by creating an ecosystem of online developer community. 
+   In this ecosystem one developer can ask for solutions to the to the problems one is facing, while other developers can 
+   interact by posting code snippets, giving suggestions, to solve those asked problems. 
    As such, SO has become a rich source of ready-to-use code snippets for software developers. 
    This richness has caused SO to enter the agile software development cycle allowing fast prototyping, and an efficient workflow. 
-   Particularlly novice developers treasure the quick-direct help from the community providing easy ready-to-use code snippets.
-   Interestingly copying-pasting code snippets into production level source code found on SO, is a common practice, not only shared by the inexperienced developers, but also by large parts of the developer community. 
-   Ecouraging, sometimes experienced developers can potentially promote best- practices by engaging with other developers, providing high quality code snippets, and eventually improving code quality on a large basis.
+   Particularly novice developers treasure the quick-direct help from the community providing easy ready-to-use code snippets.
+   Interestingly copying-pasting code snippets into production level source code found on SO, is a common practice, 
+   not only shared by the inexperienced developers, but also by large parts of the developer community. 
+   Encouragingly, sometimes experienced developers can potentially promote best- practices by engaging with other developers, 
+   providing high quality code snippets, and eventually improving code quality on a large basis.
    %Because whenever developers search online to find a working solution %to the problem they are facing, 
    %they are very likely to encouter an accepted working code snippet in SO to solve that problem. 
    %post created by some developer who has faced the same problem previously.
 
-   Unfortunately for secure coding practices, there is a sharp contrast. Fischer et al.~\cite{fischer2017stack} quantitatively measured that an Android developer seeking help on SO, can find accepted popular code snippets suggesting insecure X509 certificate validation, misusing Android’s cryptographic API  as shown in Figure~\ref{fig:SO_screenshot}. Moreover a developer struggling with handling Java Spring security framework's configuration errors, can find code snippets suugessting turning off CSRF security protection entirely to avoid errors. 
+   Unfortunately for secure coding practices, there is a sharp contrast. Fischer et al.~\cite{fischer2017stack} quantitatively 
+   measured that an Android developer seeking help on SO, can find accepted popular code snippets suggesting insecure 
+   X509 certificate validation, misusing Android’s cryptographic API  as shown in Figure~\ref{fig:SO_screenshot}. 
+   Moreover a developer struggling with handling Java Spring security framework's configuration errors, 
+   can find code snippets suggesting turning off CSRF security protection entirely to avoid errors. 
    
    Insecure code snippets found on Stack Overflow itself is not a serious problem. However 
-   these insecure code snippets can  naturally enter the development cycle by developers who are copy-pasting them into the production level code -- casuing vulnerabilities in softwares.
-   Moreover to add salt to the problem, these insecure code snippets are being accepted, promoted even by users having high repuration~\cite{meng2018secure}.
-   Even so condescending comments are being directed at security conscious users~\cite{java-so-cyber-bullying}. 
-   This gives the developers a high level of false confidencee while copy-pasting insecure code-snippets that they are widely accepted by online community, and hence, would not cause any security problems. 
+   these insecure code snippets can  naturally enter the development cycle by developers who are copy-pasting them into 
+   the production level code -- causing vulnerabilities in softwares.
+   Moreover to add salt to the problem, these insecure code snippets are being accepted, promoted even by users having high reputations~\cite{meng2018secure}.
+   Even so arrogant comments are being directed at a security conscious users~\cite{java-so-cyber-bullying} having low reputation points on Stack Overflow. 
+   This gives the developers a high level of false confidence while copy-pasting insecure code-snippets that they 
+   are widely accepted by online community, and hence, would not cause any security problems. 
 
    
    
    To solve this problem, we need a way to flag the insecure patterns present on code snippets. 
-   This will help developers to be more cautions before copy pasting insecure code snippets. This type of flagging can also draw more attention to the developers before upvoting or advising for an insecure code snippet. Consequently, this can promote writing secure code snippets in Stack Overflow eco-system.
+   This will help developers to be more cautions before copy pasting insecure code snippets. This type of flagging can also 
+   draw more attention to the developers before upvoting or advising for an insecure code snippet. 
+   Consequently, this can promote writing secure code snippets in Stack Overflow ecosystem.
    However there is no existing tool used by Stack Overflow to analyze and flag a code snippet when it contains potential insecure patterns.
    %Moreover this will also encourage, and cause the high repulated users to pay special attention to write secure code snippets as answers. 
    
-   Towards solving this problem, in this paper, we aim to develop a static analysis tool  which can identify which part of the code snippet is insecure and suggest secure alternative suggestions to developers. However analyzing code snippets for insecure patterns presents some unique challenges. Since  code snippets are
-   oftentimes erronous, incomplete, we have to apply code repair techniques to be able to convert them to an intermediate representation (IR) before running any static analysis. We also need to identify which insecure patterns are common.%and how to identify them %to address this problem. 
-   Therefore, we first compile a list of 8 most insecure patterns related to code snippets in Java language by studying the literature. We then apply simple lexical parsing repairs to the code snippets before converting them to an intermediate representation (IR) language called Jimple. Finally we use a combination of keyword matching, and backword flow analysis based detection method to idenitify the 8 most common insecure patterns in code snippets collected from SO.
+   Towards solving this problem, in this paper, we aim to develop a static analysis tool  which can identify which part of the code snippet is insecure 
+   and suggest secure alternative suggestions to developers. However analyzing code snippets for insecure patterns presents some unique challenges. 
+   Since  code snippets are
+   oftentimes erronous, incomplete, we have to apply code repair techniques to be able to convert them to an intermediate representation (IR) 
+   before running any static analysis. We also need to identify which insecure patterns are common.%and how to identify them %to address this problem. 
+   Therefore, we first compile a list of 8 most insecure patterns related to code snippets in Java language by studying the literature. 
+   We then apply simple lexical parsing repairs to the code snippets before converting them to an intermediate representation (IR) language called Jimple. 
+   Finally we use a combination of keyword matching, and backward flow analysis based detection method to identify 
+   the 8 most common insecure patterns in code snippets collected from SO.
    
    
    In summary, we make the following the contributions in the paper: 
    \begin{itemize}
-   \item We present 8 common insecure patterns apearning most frequently  in Java language code snippets posted on SO by surveying the literature (Section ~\ref{sec:insecure-patterns}).      
-   \item We develop code repair tecniques from simple parsing fixes, and apply them on code snippets from SO to convert them to Jimple intermidate representation (IR). %We are able to successfully repair 30\% of the code snippets in this process. 
+   \item We present 8 common insecure patterns apearning most frequently  in Java language code snippets posted on 
+   SO by surveying the literature (Section ~\ref{sec:insecure-patterns}).      
+   \item We develop code repair techniques from simple parsing fixes, and apply them on code snippets 
+   from SO to convert them to Jimple intermediate representation (IR). %We are able to successfully repair 30\% of the code snippets in this process. 
    %to detect the 8 insecure patterns. 
    (Section~\ref{subsec:code-repair}). 
-   \item  We run keyword matching and backword flow analysis based detection method to identify the presence of 8 insecure patterns (Section~\ref{subsec:identifying-insecure-patterns}).
+   \item  We run keyword matching and backward flow analysis based detection method to identify the presence of 8 insecure patterns 
+   (Section~\ref{subsec:identifying-insecure-patterns}).
    \item We manually verify our code repair and detection accuracy on a collection of 1.6K code snippets from SO (Section ~\ref{sec:results}). 
    \end{itemize}
 
-   The rest of the paper is organized as the following: section~\ref{sec:insecure-patterns} describes 8 most common insecure patterns found on code snippets, and explains why they are insecure, section~\ref{sec:methodology} describes our methodology and section~\ref{sec:results} presents experimental evalvuation results. We conclude the paper by presenting some complelling discussions on ML based vulnerability detection models (section ~\ref{sec:discussion}), limitations of our study (section ~\ref{sec:limitations}), and future work (section~\ref{sec:future-work}).
+   The rest of the paper is organized as the following: section~\ref{sec:insecure-patterns} describes 8 most common 
+   insecure patterns found on code snippets, and explains why they are insecure, section~\ref{sec:methodology} describes 
+   our methodology and section~\ref{sec:results} presents experimental evaluation results. 
+   We conclude the paper by presenting some compelling discussions on ML based vulnerability detection models (Section ~\ref{sec:discussion}), 
+   limitations of our study (Section ~\ref{sec:limitations}). %and future work (section~\ref{sec:future-work}).
    %Then we can run analysis on the IR. In this paper we apply simple parsing repairs to 1.6K , used  
    %In absense of such tool, SO is potentially contributing as a major source of vulnerability in production level code.        
 

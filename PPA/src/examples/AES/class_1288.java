@@ -67,7 +67,7 @@ public static void main(String[] args) throws DataLengthException, IllegalStateE
     // so lets make it a bit shorter... the PHP way
     // note that in PHP, the string may *not* contain a null terminator
     // add it yourself before printing the string
-    System.out.println(new String(decrypted, Charset.forName("UTF8")).replaceAll("\\x00+$", "));
+    System.out.println(new String(decrypted, Charset.forName("UTF8")).replaceAll("\\x00+$", ""));
 }
 
 }

@@ -7,9 +7,12 @@ If we have analyzed code snippets from other popular languages~\cite{stackoverfl
 discover more insecure patterns.   
 
 
-\subsection{Limitations from program repair techniques.} The program repair techniques in section~\ref{subsec:code-repair}, we have applied on erronous code snippets, 
+\subsection{Limitations from program repair techniques.} The program repair techniques in section~\ref{subsec:code-repair}, 
+we have applied on erroneous code snippets, 
 before converting them to Jimple IR, are simple semi-automated simple parsing  repairs. It would have been better to see if state-of-the-art  
-the program repair techniques can be adjusted to repair them. Especially automated program repair tools which can apply quick single edit fixes (e.g, Google's OSS-Fuzz and Microsoft's Springfield project) are quite enticing to apply for fixing erronous code snippets as discussed in this great survey paper~\cite{automated-program-repair}.
+the program repair techniques can be adjusted to repair them. Especially automated program repair tools which can apply quick single 
+edit fixes (e.g, Google's OSS-Fuzz and Microsoft's Springfield project) are quite enticing to apply 
+for fixing erroneous code snippets as discussed in this great survey paper~\cite{automated-program-repair}.
 
 
 
@@ -19,7 +22,7 @@ the program repair techniques can be adjusted to repair them. Especially automat
 analysis depends on Jimple.
 Jimple, a 3-address IR, was designed to handle, and simplify several
 difficulties while performing optimizations on the stack-based Java bytecode directly~\cite{vallee1998jimple}. However, 
-the simple grammer of Jimple on which we are running backword flow analysis can not handle annonymous class. 
+the simple grammer of Jimple on which we are running backward flow analysis can not handle annonymous class. 
 Annonymous classes are the most common way developers declare the X509TrustManager interface (insecure pattern \# 3). Because of
 Jimple inability to express annonymous classes, we can not detect the insecure pattern \#3.
 
@@ -31,5 +34,11 @@ insecure advices given in text forms on Stackoverflow.
 As we are only considering code snippets we are missing out on them. 
 Ideally we would like to use NLP techniques to detect the insecure advices. Also some code snippets do contains insecure patterns 
 but the developers has warned against blindly copy pasting this insecure code snippets as comments in the code snippets. As we are disregarding
-comments, it is quite debateable that considering the code snippets would make sense at any one before copy pasting this
+comments, it is quite debatable that considering the code snippets would make sense at any one before copy pasting this
 code snippet would read the comment and already know abut the insecurity of the code snippet.     
+
+\iffalse
+Section 2 contains the insecure patterns, an illustrative code examples, and why they are insecure drawn from the existing literature.
+Section 3 contains the program analysis, code repair techniques I have used.
+In Table 4 I can not detect insecure pattern 3 -- Abuse of X509TrustManager Verifier Interface. I have try to explain the reasons in Appendix 10, and in Figure 5, and 6.
+\fi

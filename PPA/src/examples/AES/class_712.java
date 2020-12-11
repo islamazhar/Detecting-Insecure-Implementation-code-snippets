@@ -48,7 +48,7 @@ public static String encrypt(final String plainMessage,
         // TODO Auto-generated catch block
         e.printStackTrace();
     }
-    return ";
+    return "";
 
 }
 
@@ -101,7 +101,7 @@ public static String decrypt(final String ivAndEncryptedMessageBase64,
         // TODO Auto-generated catch block
         e.printStackTrace();
     }
-    return ";
+    return "";
 }
 
 }

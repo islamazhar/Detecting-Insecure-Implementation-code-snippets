@@ -2,12 +2,19 @@
 \section{Related Work}
 \label{sec:related-work}
 %\textbf{Code snippets on StackOverflow.} 
-Our work is motived by the following related research work. 
+Our work is motivated by the following related research work. 
 Subramanian, et al.~\cite{subramanian2013making} used Eclipse Java Development Tools (JDT)~\footnote{\url{http://www.eclipse.org/jdt}}  
-to find structural models of code snippets in Stack Overflow. Consequently, by analyzing \textit{solved} Stack Overflow questions having \textit{Android} tag they present a common list of Android API types and methods -- something which normal lexical parsers are unable to detect. 
-Fischer et al.~\cite{fischer2017stack}  quantitatively evaluated the observation that a large number of insecure code snippets are being directly copy-pasted, repeatedly resued. They showed that a simple stochastic gradient descent based classifier can confirm that among 1.3 million Google Play Android applications, 15.4\% contains security-related code snippets from  from Stack Overflow -- out of which 97.9\% contain at least one insecre code snippet. 
-Meng et al.~\cite{meng2018secure} did an empirical study on the on StackOverflow posts, aiming to understand developers’ concerns on Java secure coding. This study highlights a number of popular-accepted insecure suggestions on  StackOverflow including sugeestions to disabling the default protection against Cross-Site Request Forgery (CSRF) attacks, breaking SSL/TLS security through bypassing certificate validation, and using insecure cryptographic hash functions. These harmful insecure suggestions can easily misguide developer -- the extend of which is still unknown today. 
-Interestingly, Rahman et al.~\cite{akondsnakes} did a study similar to Meng et al.~\cite{meng2018secure}, but for code snippets for Python language. They observed that 9.8\% of the 7,444 accepted answers to include at least one insecure code block. Most importantly they also find user reputation not
+to find structural models of code snippets in Stack Overflow. Consequently, by analyzing \textit{solved} Stack Overflow questions having \textit{Android} 
+tag they present a common list of Android API types and methods -- something which normal lexical parsers are unable to detect. 
+Fischer et al.~\cite{fischer2017stack}  quantitatively evaluated the observation that a large number of insecure code snippets are being directly copy-pasted, 
+repeatedly reused. They showed that a simple stochastic gradient descent based classifier can confirm that among 1.3 million Google Play Android applications, 
+15.4\% contains security-related code snippets from  from Stack Overflow -- out of which 97.9\% contain at least one insecure code snippet. 
+Meng et al.~\cite{meng2018secure} did an empirical study on the on StackOverflow posts, aiming to understand developers’ concerns on Java secure coding. 
+This study highlights a number of popular-accepted insecure suggestions on  StackOverflow including sugeestions to disabling the default protection 
+against Cross-Site Request Forgery (CSRF) attacks, breaking SSL/TLS security through bypassing certificate validation, and using insecure cryptographic 
+hash functions. These harmful insecure suggestions can easily misguide developer -- the extend of which is still unknown today. 
+Interestingly, Rahman et al.~\cite{akondsnakes} did a study similar to Meng et al.~\cite{meng2018secure}, but for code snippets for Python language. 
+They observed that 9.8\% of the 7,444 accepted answers to include at least one insecure code block. Most importantly they also find user reputation not
 translate to the presence of insecure code blocks, implying  that both high and low-reputed users are likely to introduce insecure code blocks. 
 
 %\noindent

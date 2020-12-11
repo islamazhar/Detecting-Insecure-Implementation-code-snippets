@@ -2,7 +2,7 @@ package examples.AES;
 public class class_216 { 
 public static String Encrypt(String text, String key)
     {
-        String Encoded = ";
+        String Encoded = "";
         try {
 
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");

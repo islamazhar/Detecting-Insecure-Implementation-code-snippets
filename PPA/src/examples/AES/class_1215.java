@@ -3,7 +3,7 @@ public class class_1215 {
 public String encryptString(String string, String key)
 {
     byte[] aesData;
-    String base64=";
+    String base64="";
 
     try 
     {
@@ -21,7 +21,7 @@ public String encryptString(String string, String key)
 public String decryptString(String string, String key)
 {
     byte[] debase64 = null;
-    String result=";
+    String result="";
 
     try 
     {
